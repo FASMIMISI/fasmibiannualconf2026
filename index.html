@@ -898,31 +898,52 @@
 
                 return fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
-                    mode: 'no-cors',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(sheetData)
+                }).then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text().then(text => {
+                        try {
+                            const result = JSON.parse(text);
+                            if (!result.success) {
+                                throw new Error('Script returned error: ' + (result.error || 'Unknown error'));
+                            }
+                            return result;
+                        } catch {
+                            // If response is not JSON, assume it's successful
+                            return { success: true };
+                        }
+                    });
                 });
             };
 
             // Try Google Sheets first, then EmailJS, then email fallback
             sendToGoogleSheets()
-                .then(() => {
+                .then((result) => {
+                    console.log('Google Sheets success:', result);
                     alert('Thank you! Your registration has been submitted to our database. We will keep you updated about the FASMI Biennial Meeting 2026.');
                     formEl.reset();
                 })
-                .catch(() => {
+                .catch((error) => {
+                    console.log('Google Sheets failed:', error);
+                    console.log('Falling back to EmailJS...');
                     // Fallback to EmailJS
                     return sendViaEmailJS();
                 })
-                .then(() => {
+                .then((result) => {
                     if (submitBtn.textContent === 'Submitting...') {
-                        alert('Thank you! Your registration has been sent. We will keep you updated.');
+                        console.log('EmailJS success:', result);
+                        alert('Thank you! Your registration has been sent via email. We will keep you updated.');
                         formEl.reset();
                     }
                 })
-                .catch(() => {
+                .catch((error) => {
+                    console.log('EmailJS failed:', error);
+                    console.log('Falling back to mailto...');
                     // Final fallback to email
                     sendViaMailto();
                     setTimeout(() => {
