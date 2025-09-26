@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FASMI Biannual Meeting 2026</title>
+    <title>FASMI Biennial Meeting 2026</title>
     <style>
         * {
             margin: 0;
@@ -129,6 +129,29 @@
             font-size: 1.1rem;
             opacity: 0.8;
             animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .hosted-by {
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        .host-logos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .host-logos img {
+            filter: brightness(0) invert(1);
+            opacity: 0.9;
+            transition: opacity 0.3s ease;
+        }
+
+        .host-logos img:hover {
+            opacity: 1;
         }
 
         /* Section Styles */
@@ -504,9 +527,16 @@
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1 class="hero-title">FASMI Biannual Meeting 2026</h1>
+            <h1 class="hero-title">FASMI Biennial Meeting 2026</h1>
             <p class="hero-subtitle">Federation of Asian Societies for Molecular Imaging</p>
             <p class="hero-location">Hyderabad, India | 2026</p>
+            <div class="hosted-by">
+                <p style="margin-bottom: 20px; font-size: 1.6rem; opacity: 0.9;">Hosted by</p>
+                <div class="host-logos">
+                    <img src="osmlogo.png" alt="Osmania University" style="height: 80px; margin: 0 20px;">
+                    <img src="india.png" alt="Molecular Imaging Society of India" style="height: 80px; margin: 0 20px;">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -514,7 +544,7 @@
     <section class="section" id="about">
         <h2 class="section-title animate-on-scroll">About FASMI</h2>
         <div class="section-content animate-on-scroll">
-            <p>The Federation of Asian Societies for Molecular Imaging (FASMI) is a collaborative organization uniting molecular imaging societies across the Asia-Pacific region. It was established in September 2006 as a joint initiative of the founding national societies from Japan, Korea, and Taiwan. FASMI aims to advance the field of molecular imaging by fostering communication, collaboration, and education among researchers, clinicians, and scientists. The society actively advocates for the representation and visibility of Asian molecular imaging communities on the global stage, particularly within the World Molecular Imaging Society (WMIS). FASMI holds a biannual meeting that serves as a key platform for scientific exchange and promotes collaborative research and innovation within the region. With active participation from societies in Japan, Korea, Taiwan, India, and Australia, and others, FASMI continues to support interdisciplinary research, drive technological advancement, and strengthen the collective voice of Asia in the global molecular imaging community.</p>
+            <p>The Federation of Asian Societies for Molecular Imaging (FASMI) is a collaborative organization uniting molecular imaging societies across the Asia-Pacific region. It was established in September 2006 as a joint initiative of the founding national societies from Japan, Korea, and Taiwan. FASMI aims to advance the field of molecular imaging by fostering communication, collaboration, and education among researchers, clinicians, and scientists. The society actively advocates for the representation and visibility of Asian molecular imaging communities on the global stage, particularly within the World Molecular Imaging Society (WMIS). FASMI holds a Biennial meeting that serves as a key platform for scientific exchange and promotes collaborative research and innovation within the region. With active participation from societies in Japan, Korea, Taiwan, India, and Australia, and others, FASMI continues to support interdisciplinary research, drive technological advancement, and strengthen the collective voice of Asia in the global molecular imaging community.</p>
         </div>
         
         <div class="member-societies">
@@ -545,7 +575,26 @@
     <section class="section" id="misi">
         <h2 class="section-title animate-on-scroll">Molecular Imaging Society of India (MISI)</h2>
         <div class="section-content animate-on-scroll">
-            <p>The Molecular Imaging Society of India (MISI) is a vibrant organization dedicated to advancing multi-modality molecular imaging across the Indian subcontinent. It supports both basic and clinical research, uniting professionals—including clinicians, scientists, engineers, and industry leaders—on a single platform. Officially inaugurated in 2014, MISI serves as the Indian affiliate of the World Molecular Imaging Society (WMIS). Through collaborations with the Indian Association of Nuclear Medicine (IASNM) and other leading organizations and universities, MISI fosters knowledge exchange and is committed to enhancing the global presence of Indian molecular imaging research. The society actively works to translate cutting-edge imaging technologies into meaningful healthcare outcomes. MISI is also deeply invested in supporting students and young researchers, offering opportunities to engage with global experts through its monthly webinar series. As a testament to its commitment to regional collaboration, MISI is honoured to be hosting the upcoming biannual FASMI meeting.</p>
+            <p>The Molecular Imaging Society of India (MISI) is a vibrant organization dedicated to advancing multi-modality molecular imaging across the Indian subcontinent. It supports both basic and clinical research, uniting professionals—including clinicians, scientists, engineers, and industry leaders—on a single platform. Officially inaugurated in 2014, MISI serves as the Indian affiliate of the World Molecular Imaging Society (WMIS). Through collaborations with the Indian Association of Nuclear Medicine (IASNM) and other leading organizations and universities, MISI fosters knowledge exchange and is committed to enhancing the global presence of Indian molecular imaging research. The society actively works to translate cutting-edge imaging technologies into meaningful healthcare outcomes. MISI is also deeply invested in supporting students and young researchers, offering opportunities to engage with global experts through its monthly webinar series. As a testament to its commitment to regional collaboration, MISI is honoured to be hosting the upcoming Biennial FASMI meeting.</p>
+        </div>
+    </section>
+
+    <!-- Osmania Section -->
+    <section class="section" id="osmania">
+        <h2 class="section-title animate-on-scroll">Osmania University</h2>
+        <div class="osmania-content">
+            <div class="osmania-image animate-left">
+                <img src="osm.png" alt="Osmania University">
+            </div>
+            <div class="osmania-text animate-right">
+                <p>Osmania University's Central Facilities for Research & Development (CFRD) hosts a Central Instrumentation Laboratory with confocal microscopy, HPLC, AKTA and related platforms well suited for probe validation and molecular-scale imaging.</p>
+                <br>
+                <p>The university's research centres — notably the Centre for Plant Molecular Biology and the Institute of Genetics and Hospital for Genetic Diseases — provide molecular-biology expertise, training and preclinical models that support tracer development and translational research.</p>
+                <br>
+                <p>Close links with Osmania Medical College and nearby clinical imaging services facilitate multidisciplinary collaboration, practical workshops and early clinical translation (PET/SPECT) of imaging agents and protocols.</p>
+                <br>
+                <p>Collectively, these assets make Osmania University a strong and practical academic venue for the molecular-imaging program of FASMI 2026.</p>
+            </div>
         </div>
     </section>
 
@@ -594,30 +643,11 @@
         </div>
     </section>
 
-    <!-- Osmania Section -->
-    <section class="section" id="osmania">
-        <h2 class="section-title animate-on-scroll">Osmania University</h2>
-        <div class="osmania-content">
-            <div class="osmania-image animate-left">
-                <img src="osm.png" alt="Osmania University">
-            </div>
-            <div class="osmania-text animate-right">
-                <p>Osmania University's Central Facilities for Research & Development (CFRD) hosts a Central Instrumentation Laboratory with confocal microscopy, HPLC, AKTA and related platforms well suited for probe validation and molecular-scale imaging.</p>
-                <br>
-                <p>The university's research centres — notably the Centre for Plant Molecular Biology and the Institute of Genetics and Hospital for Genetic Diseases — provide molecular-biology expertise, training and preclinical models that support tracer development and translational research.</p>
-                <br>
-                <p>Close links with Osmania Medical College and nearby clinical imaging services facilitate multidisciplinary collaboration, practical workshops and early clinical translation (PET/SPECT) of imaging agents and protocols.</p>
-                <br>
-                <p>Collectively, these assets make Osmania University a strong and practical academic venue for the molecular-imaging program of FASMI 2026.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Registration Section -->
     <section class="section" id="registration">
         <h2 class="section-title animate-on-scroll">Registration Form</h2>
         <div class="section-content animate-on-scroll">
-            <p>Subscribe for FASMI Biannual Meeting 2026 updates: receive announcements on dates, program, registration and news.</p>
+            <p>Subscribe for FASMI Biennial Meeting 2026 updates: receive announcements on dates, program, registration and news.</p>
         </div>
         
         <form class="registration-form animate-on-scroll">
@@ -838,17 +868,71 @@
                 window.location.href = mailtoUrl;
             };
 
-            sendViaEmailJS()
+            // Show loading state
+            const submitBtn = formEl.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            // Prepare data for Google Sheets
+            const sheetData = {
+                timestamp: new Date().toLocaleString(),
+                fullName: data.fullName || '',
+                title: data.title || '',
+                institution: data.institution || '',
+                email: data.email || '',
+                phone: data.phone || '',
+                country: data.country || '',
+                expertise: (data.expertise || []).join(', '),
+                interests: (data.interests || []).join(', ')
+            };
+
+            // Send to Google Sheets via Google Apps Script
+            const sendToGoogleSheets = () => {
+                // TODO: Replace with your Google Apps Script Web App URL
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzP9JoulfBUCHExsjIWIrKG55tfwpq9eB43WBK1XiOz9D9ApAJdtlId7tzgOf3nS9Tg_A/exec';
+                
+                if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
+                    return Promise.reject(new Error('Google Script URL not configured'));
+                }
+
+                return fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(sheetData)
+                });
+            };
+
+            // Try Google Sheets first, then EmailJS, then email fallback
+            sendToGoogleSheets()
                 .then(() => {
-                    alert('Thank you! Your registration has been sent. We will keep you updated.');
+                    alert('Thank you! Your registration has been submitted to our database. We will keep you updated about the FASMI Biennial Meeting 2026.');
                     formEl.reset();
                 })
                 .catch(() => {
-                    // Fallback to mailto if EmailJS not configured/failed
+                    // Fallback to EmailJS
+                    return sendViaEmailJS();
+                })
+                .then(() => {
+                    if (submitBtn.textContent === 'Submitting...') {
+                        alert('Thank you! Your registration has been sent. We will keep you updated.');
+                        formEl.reset();
+                    }
+                })
+                .catch(() => {
+                    // Final fallback to email
                     sendViaMailto();
                     setTimeout(() => {
-                        alert('If your email client did not open, please configure EmailJS in the code.');
+                        alert('Registration data has been prepared for email. Please send the email to complete your registration.');
                     }, 300);
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
                 });
         });
 
