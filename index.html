@@ -674,33 +674,116 @@
             <p>Subscribe for FASMI Biennial Meeting 2026 updates: receive announcements on dates, program, registration and news.</p>
         </div>
         
-        <div class="registration-form animate-on-scroll">
+        <form class="registration-form animate-on-scroll">
             <h3 style="text-align: center; margin-bottom: 30px; color: #2c3e50;"></h3>
-            <p style="text-align: center; margin-bottom: 30px; font-size: 1.1rem;">
-            </p>
             
-            <!-- Embedded Google Form -->
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeOEv4_sC7d_fVRfu7ulmcqXvGBwdSpbvVQNwKN0YJ522oTVw/viewform?embedded=true" 
-                    width="100%" 
-                    height="800" 
-                    frameborder="0" 
-                    marginheight="0" 
-                    marginwidth="0"
-                    style="border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);">
-                Loading…
-            </iframe>
-            
-            <div style="text-align: center; margin-top: 20px;">
-                <p style="font-size: 0.9rem; color: #666;">
-                    Having trouble with the form? 
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeOEv4_sC7d_fVRfu7ulmcqXvGBwdSpbvVQNwKN0YJ522oTVw/viewform" 
-                       target="_blank" 
-                       style="color: #667eea; text-decoration: none;">
-                        Open in new tab
-                    </a>
-                </p>
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required>
             </div>
-        </div>
+            
+            <div class="form-group">
+                <label for="title">Title/Position:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="institution">Institution/Organization:</label>
+                <input type="text" id="institution" name="institution" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text" id="country" name="country" required>
+            </div>
+            
+            <h3 style="text-align: center; margin: 40px 0 30px; color: #2c3e50;"></h3>
+            
+            <div class="form-group">
+                <label>Field of Expertise:</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="nuclear" name="expertise" value="Nuclear Medicine">
+                        <label for="nuclear">Nuclear Medicine</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="radiology" name="expertise" value="Radiology">
+                        <label for="radiology">Radiology</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="physics" name="expertise" value="Medical Physics">
+                        <label for="physics">Medical Physics</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="engineering" name="expertise" value="Biomedical Engineering">
+                        <label for="engineering">Biomedical Engineering</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="pharma" name="expertise" value="Pharmaceutical Sciences">
+                        <label for="pharma">Pharmaceutical Sciences</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="research" name="expertise" value="Clinical Research">
+                        <label for="research">Clinical Research</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="other" name="expertise" value="Other">
+                        <label for="other">Other:</label>
+                        <input type="text" placeholder="Please specify" style="width: 150px; margin-left: 10px;">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Areas of Interest (Select all that apply):</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="petct" name="interests" value="PET/CT Imaging">
+                        <label for="petct">PET/CT Imaging</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="spect" name="interests" value="SPECT Imaging">
+                        <label for="spect">SPECT Imaging</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="mri" name="interests" value="MRI Molecular Imaging">
+                        <label for="mri">MRI Molecular Imaging</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="optical" name="interests" value="Optical Imaging">
+                        <label for="optical">Optical Imaging</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="radiopharma" name="interests" value="Radiopharmaceutical Development">
+                        <label for="radiopharma">Radiopharmaceutical Development</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="theranostics" name="interests" value="Theranostics">
+                        <label for="theranostics">Theranostics</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ai" name="interests" value="AI in Molecular Imaging">
+                        <label for="ai">AI in Molecular Imaging</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="clinical" name="interests" value="Clinical Applications">
+                        <label for="clinical">Clinical Applications</label>
+                    </div>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Registration</button>
+        </form>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
@@ -746,10 +829,153 @@
             observer.observe(el);
         });
 
-        // Simple form submission to Google Forms
+        // Form submission handling with EmailJS + mailto fallback
         document.querySelector('.registration-form').addEventListener('submit', function(e) {
-            // Let the form submit naturally to Google Forms
-            console.log('Form submitted to Google Forms');
+            e.preventDefault();
+            const formEl = this;
+            
+            // Collect form data
+            const formData = new FormData(formEl);
+            const data = {};
+            for (let [key, value] of formData.entries()) {
+                if (key === 'expertise' || key === 'interests') {
+                    if (!data[key]) data[key] = [];
+                    data[key].push(value);
+                } else {
+                    data[key] = value;
+                }
+            }
+            // Explicitly gather checkbox arrays
+            const expertiseCheckboxes = formEl.querySelectorAll('input[name="expertise"]:checked');
+            const interestsCheckboxes = formEl.querySelectorAll('input[name="interests"]:checked');
+            data.expertise = Array.from(expertiseCheckboxes).map(cb => cb.value);
+            data.interests = Array.from(interestsCheckboxes).map(cb => cb.value);
+
+            // Prepare EmailJS params
+            const templateParams = {
+                to_email: 'fasmibiannualconf2026@gmail.com',
+                subject: 'New FASMI 2026 Registration',
+                full_name: data.fullName || '',
+                title_position: data.title || '',
+                institution: data.institution || '',
+                email: data.email || '',
+                phone: data.phone || '',
+                country: data.country || '',
+                expertise_list: (data.expertise || []).join(', '),
+                interests_list: (data.interests || []).join(', ')
+            };
+
+            const sendViaEmailJS = () => {
+                // TODO: Replace with your actual EmailJS Service ID and Template ID
+                const SERVICE_ID = 'service_8nwownl';
+                const TEMPLATE_ID = 'template_hx3zoev';
+                if (!window.emailjs || SERVICE_ID === 'YOUR_SERVICE_ID' || TEMPLATE_ID === 'YOUR_TEMPLATE_ID') {
+                    return Promise.reject(new Error('EmailJS not configured'));
+                }
+                return emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams);
+            };
+
+            const sendViaMailto = () => {
+                const lines = [
+                    `Full Name: ${templateParams.full_name}`,
+                    `Title/Position: ${templateParams.title_position}`,
+                    `Institution/Organization: ${templateParams.institution}`,
+                    `Email: ${templateParams.email}`,
+                    `Phone: ${templateParams.phone}`,
+                    `Country: ${templateParams.country}`,
+                    `Field(s) of Expertise: ${templateParams.expertise_list}`,
+                    `Areas of Interest: ${templateParams.interests_list}`
+                ];
+                const subject = encodeURIComponent(templateParams.subject);
+                const body = encodeURIComponent(lines.join('\n'));
+                const mailtoUrl = `mailto:${templateParams.to_email}?subject=${subject}&body=${body}`;
+                window.location.href = mailtoUrl;
+            };
+
+            // Show loading state
+            const submitBtn = formEl.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'Submitting...';
+            submitBtn.disabled = true;
+
+            // Prepare data for Google Sheets
+            const sheetData = {
+                timestamp: new Date().toLocaleString(),
+                fullName: data.fullName || '',
+                title: data.title || '',
+                institution: data.institution || '',
+                email: data.email || '',
+                phone: data.phone || '',
+                country: data.country || '',
+                expertise: (data.expertise || []).join(', '),
+                interests: (data.interests || []).join(', ')
+            };
+            
+            console.log('Form data collected:', sheetData);
+
+            // Send to Google Sheets via Google Apps Script
+            const sendToGoogleSheets = () => {
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLQCaX55w83CC010zXPqC1nzfM6Uwrt6VCY7qIzOMgzIH7ETFkEuEf2oa0sVb1VrCddg/exec';
+                
+                console.log('Sending to Google Sheets:', GOOGLE_SCRIPT_URL);
+                console.log('Data being sent:', sheetData);
+
+                // Use GET request with URL parameters to avoid CORS issues
+                const params = new URLSearchParams({
+                    timestamp: sheetData.timestamp,
+                    fullName: sheetData.fullName,
+                    title: sheetData.title,
+                    institution: sheetData.institution,
+                    email: sheetData.email,
+                    phone: sheetData.phone,
+                    country: sheetData.country,
+                    expertise: sheetData.expertise,
+                    interests: sheetData.interests
+                });
+
+                return fetch(`${GOOGLE_SCRIPT_URL}?${params}`, {
+                    method: 'GET',
+                    mode: 'no-cors'
+                }).then(() => {
+                    // With no-cors mode, we can't read the response, so assume success
+                    return { success: true };
+                });
+            };
+
+            // Try Google Sheets first, then EmailJS, then email fallback
+            sendToGoogleSheets()
+                .then((result) => {
+                    console.log('Google Sheets success:', result);
+                    alert('Thank you! Your registration has been submitted to our database. We will keep you updated about the FASMI Biennial Meeting 2026.');
+                    formEl.reset();
+                })
+                .catch((error) => {
+                    console.log('Google Sheets failed:', error);
+                    console.log('Falling back to EmailJS...');
+                    // Fallback to EmailJS
+                    return sendViaEmailJS();
+                })
+                .then((result) => {
+                    if (submitBtn.textContent === 'Submitting...') {
+                        console.log('EmailJS success:', result);
+                        alert('Thank you! Your registration has been sent via email. We will keep you updated.');
+                        formEl.reset();
+                    }
+                })
+                .catch((error) => {
+                    console.log('EmailJS failed:', error);
+                    console.log('Falling back to mailto...');
+                    // Final fallback to email
+                    sendViaMailto();
+                    setTimeout(() => {
+                        alert('Registration data has been prepared for email. Please send the email to complete your registration.');
+                    }, 300);
+                })
+                .finally(() => {
+                    // Reset button state
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                });
         });
 
         // Add some interactive effects
