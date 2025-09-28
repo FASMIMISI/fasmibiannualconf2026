@@ -119,14 +119,14 @@
         }
 
         .hero-subtitle {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             margin-bottom: 10px;
             opacity: 0.9;
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
         .hero-location {
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             opacity: 0.8;
             animation: fadeInUp 1s ease-out 0.6s both;
         }
@@ -139,19 +139,32 @@
         .host-logos {
             display: flex;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
             flex-wrap: wrap;
-            gap: 10px;
+            gap: 30px;
         }
 
-        .host-logos img {
+        .host-logo-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .host-logo-item img {
             filter: brightness(0) invert(1);
             opacity: 0.9;
             transition: opacity 0.3s ease;
         }
 
-        .host-logos img:hover {
+        .host-logo-item img:hover {
             opacity: 1;
+        }
+
+        .host-logo-item p {
+            color: white;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
 
         /* Section Styles */
@@ -217,10 +230,15 @@
             border-radius: 15px;
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .society-item:hover {
             transform: translateY(-5px);
+            text-decoration: none;
+            color: inherit;
         }
 
         .society-item img {
@@ -529,12 +547,18 @@
         <div class="hero-content">
             <h1 class="hero-title">FASMI Biennial Meeting 2026</h1>
             <p class="hero-subtitle">Federation of Asian Societies for Molecular Imaging</p>
-            <p class="hero-location">Hyderabad, India | 2026</p>
+            <p class="hero-location">Hyderabad, India | Fall 2026</p>
             <div class="hosted-by">
                 <p style="margin-bottom: 20px; font-size: 1.6rem; opacity: 0.9;">Hosted by</p>
                 <div class="host-logos">
-                    <img src="osmlogo.png" alt="Osmania University" style="height: 80px; margin: 0 20px;">
-                    <img src="india.png" alt="Molecular Imaging Society of India" style="height: 80px; margin: 0 20px;">
+                    <div class="host-logo-item">
+                        <img src="osmlogo.png" alt="Osmania University" style="height: 100px; margin: 0 20px;">
+                        <p style="margin-top: 10px; font-size: 1rem; opacity: 0.8;">Osmania University</p>
+                    </div>
+                    <div class="host-logo-item">
+                        <img src="india.png"  style="height: 100px; margin: 0 20px;">
+                        <p style="margin-top: 10px; font-size: 1rem; opacity: 0.8;"></p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -542,46 +566,46 @@
 
     <!-- About Section -->
     <section class="section" id="about">
-        <h2 class="section-title animate-on-scroll">About FASMI</h2>
+        <h2 class="section-title animate-on-scroll"><a href="https://www.f-asmi.org/" target="_blank" style="color: inherit; text-decoration: none;">About FASMI</a></h2>
         <div class="section-content animate-on-scroll">
-            <p>The Federation of Asian Societies for Molecular Imaging (FASMI) is a collaborative organization uniting molecular imaging societies across the Asia-Pacific region. It was established in September 2006 as a joint initiative of the founding national societies from Japan, Korea, and Taiwan. FASMI aims to advance the field of molecular imaging by fostering communication, collaboration, and education among researchers, clinicians, and scientists. The society actively advocates for the representation and visibility of Asian molecular imaging communities on the global stage, particularly within the World Molecular Imaging Society (WMIS). FASMI holds a Biennial meeting that serves as a key platform for scientific exchange and promotes collaborative research and innovation within the region. With active participation from societies in Japan, Korea, Taiwan, India, and Australia, and others, FASMI continues to support interdisciplinary research, drive technological advancement, and strengthen the collective voice of Asia in the global molecular imaging community.</p>
+            <p>The Federation of Asian Societies for Molecular Imaging (FASMI) is a collaborative organization uniting molecular imaging societies across the Asia-Pacific region. It was established in September 2006 as a joint initiative of the founding national societies from Japan, Korea, and Taiwan. FASMI aims to advance the field of molecular imaging by fostering communication, collaboration, and education among researchers, clinicians, and scientists. The society actively advocates for the representation and visibility of Asian molecular imaging communities on the global stage, particularly within the World Molecular Imaging Society (WMIS). FASMI holds a biennial meeting that serves as a key platform for scientific exchange and promotes collaborative research and innovation within the region. With active participation from societies in Japan, Korea, Taiwan, <strong>India</strong>, and Australia, and others, FASMI continues to support interdisciplinary research, drive technological advancement, and strengthen the collective voice of Asia in the global molecular imaging community.</p>
         </div>
         
         <div class="member-societies">
-            <div class="society-item animate-on-scroll">
+            <a href="http://www.molecularimaging.jp/information/index.asp" target="_blank" class="society-item animate-on-scroll">
                 <img src="japan.png" alt="Japan Society">
                 <h4>Japanese Society of Molecular Imaging</h4>
-            </div>
-            <div class="society-item animate-on-scroll">
+            </a>
+            <a href="http://molecularimaging.or.kr/eng/m1/m1_02.php" target="_blank" class="society-item animate-on-scroll">
                 <img src="korea.png" alt="Korea Society">
                 <h4>Korean Society of Molecular Imaging</h4>
-            </div>
-            <div class="society-item animate-on-scroll">
+            </a>
+            <a href="#" class="society-item animate-on-scroll">
                 <img src="taiwan.png" alt="Taiwan Society">
                 <h4>Taiwanese Society of Molecular Imaging</h4>
-            </div>
-            <div class="society-item animate-on-scroll">
+            </a>
+            <a href="https://www.asmi.asn.au/" target="_blank" class="society-item animate-on-scroll">
                 <img src="aus.png" alt="Australia Society">
                 <h4>Australian Society of Molecular Imaging</h4>
-            </div>
-            <div class="society-item animate-on-scroll">
+            </a>
+            <a href="https://www.mis-i.org/" target="_blank" class="society-item animate-on-scroll">
                 <img src="india.png" alt="India Society">
                 <h4>Molecular Imaging Society of India</h4>
-            </div>
+            </a>
         </div>
     </section>
 
     <!-- MISI Section -->
     <section class="section" id="misi">
-        <h2 class="section-title animate-on-scroll">Molecular Imaging Society of India (MISI)</h2>
+        <h2 class="section-title animate-on-scroll"><a href="https://www.mis-i.org/" target="_blank" style="color: inherit; text-decoration: none;">Molecular Imaging Society of India (MISI)</a></h2>
         <div class="section-content animate-on-scroll">
-            <p>The Molecular Imaging Society of India (MISI) is a vibrant organization dedicated to advancing multi-modality molecular imaging across the Indian subcontinent. It supports both basic and clinical research, uniting professionals—including clinicians, scientists, engineers, and industry leaders—on a single platform. Officially inaugurated in 2014, MISI serves as the Indian affiliate of the World Molecular Imaging Society (WMIS). Through collaborations with the Indian Association of Nuclear Medicine (IASNM) and other leading organizations and universities, MISI fosters knowledge exchange and is committed to enhancing the global presence of Indian molecular imaging research. The society actively works to translate cutting-edge imaging technologies into meaningful healthcare outcomes. MISI is also deeply invested in supporting students and young researchers, offering opportunities to engage with global experts through its monthly webinar series. As a testament to its commitment to regional collaboration, MISI is honoured to be hosting the upcoming Biennial FASMI meeting.</p>
+            <p>The Molecular Imaging Society of India (MISI) is a vibrant organization dedicated to advancing multi-modality molecular imaging across the Indian subcontinent. It supports both basic and clinical research, uniting professionals—including clinicians, scientists, engineers, and industry leaders—on a single platform. Officially inaugurated in 2014, MISI serves as the Indian affiliate of the World Molecular Imaging Society (WMIS). Through collaborations with the Indo American Society of Nuclear Medicine (IASNM) and other leading organizations and universities, MISI fosters knowledge exchange and is committed to enhancing the global presence of Indian molecular imaging research. The society actively works to translate cutting-edge imaging technologies into meaningful healthcare outcomes. MISI is also deeply invested in supporting students and young researchers, offering opportunities to engage with global experts through its monthly webinar series. As a testament to its commitment to regional collaboration, MISI is honoured to be hosting the upcoming biennial FASMI meeting, at Hyderabad, India in fall 2026 (July - Sept, dates to be confirmed soon).</p>
         </div>
     </section>
 
     <!-- Osmania Section -->
     <section class="section" id="osmania">
-        <h2 class="section-title animate-on-scroll">Osmania University</h2>
+        <h2 class="section-title animate-on-scroll"><a href="https://www.osmania.ac.in/" target="_blank" style="color: inherit; text-decoration: none;">Osmania University</a></h2>
         <div class="osmania-content">
             <div class="osmania-image animate-left">
                 <img src="osm.png" alt="Osmania University">
@@ -651,7 +675,7 @@
         </div>
         
         <form class="registration-form animate-on-scroll">
-            <h3 style="text-align: center; margin-bottom: 30px; color: #2c3e50;">Personal Information</h3>
+            <h3 style="text-align: center; margin-bottom: 30px; color: #2c3e50;"></h3>
             
             <div class="form-group">
                 <label for="fullName">Full Name:</label>
@@ -683,7 +707,7 @@
                 <input type="text" id="country" name="country" required>
             </div>
             
-            <h3 style="text-align: center; margin: 40px 0 30px; color: #2c3e50;">Professional Details</h3>
+            <h3 style="text-align: center; margin: 40px 0 30px; color: #2c3e50;"></h3>
             
             <div class="form-group">
                 <label>Field of Expertise:</label>
@@ -886,15 +910,15 @@
                 expertise: (data.expertise || []).join(', '),
                 interests: (data.interests || []).join(', ')
             };
+            
+            console.log('Form data collected:', sheetData);
 
             // Send to Google Sheets via Google Apps Script
             const sendToGoogleSheets = () => {
-                // TODO: Replace with your Google Apps Script Web App URL
                 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzP9JoulfBUCHExsjIWIrKG55tfwpq9eB43WBK1XiOz9D9ApAJdtlId7tzgOf3nS9Tg_A/exec';
                 
-                if (GOOGLE_SCRIPT_URL === 'YOUR_GOOGLE_SCRIPT_URL_HERE') {
-                    return Promise.reject(new Error('Google Script URL not configured'));
-                }
+                console.log('Sending to Google Sheets:', GOOGLE_SCRIPT_URL);
+                console.log('Data being sent:', sheetData);
 
                 return fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
@@ -903,17 +927,23 @@
                     },
                     body: JSON.stringify(sheetData)
                 }).then(response => {
+                    console.log('Google Sheets response status:', response.status);
+                    console.log('Google Sheets response ok:', response.ok);
+                    
                     if (!response.ok) {
-                        throw new Error('Network response was not ok');
+                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
                     }
                     return response.text().then(text => {
+                        console.log('Google Sheets response text:', text);
                         try {
                             const result = JSON.parse(text);
+                            console.log('Google Sheets parsed result:', result);
                             if (!result.success) {
                                 throw new Error('Script returned error: ' + (result.error || 'Unknown error'));
                             }
                             return result;
-                        } catch {
+                        } catch (parseError) {
+                            console.log('Could not parse response as JSON:', parseError);
                             // If response is not JSON, assume it's successful
                             return { success: true };
                         }
