@@ -915,39 +915,30 @@
 
             // Send to Google Sheets via Google Apps Script
             const sendToGoogleSheets = () => {
-                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLQCaX55w83CC010zXPqC1nzfM6Uwrt6VCY7qIzOMgzIH7ETFkEuEf2oa0sVb1VrCddg/exec';
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzG02PpeGPbzNZX4uArPzMrHHji7b1JuqjLWPSkOlbI1ajny8rx7xyLhcO9kD98xCtq9g/exec';
                 
                 console.log('Sending to Google Sheets:', GOOGLE_SCRIPT_URL);
                 console.log('Data being sent:', sheetData);
 
-                return fetch(GOOGLE_SCRIPT_URL, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(sheetData)
-                }).then(response => {
-                    console.log('Google Sheets response status:', response.status);
-                    console.log('Google Sheets response ok:', response.ok);
-                    
-                    if (!response.ok) {
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                    }
-                    return response.text().then(text => {
-                        console.log('Google Sheets response text:', text);
-                        try {
-                            const result = JSON.parse(text);
-                            console.log('Google Sheets parsed result:', result);
-                            if (!result.success) {
-                                throw new Error('Script returned error: ' + (result.error || 'Unknown error'));
-                            }
-                            return result;
-                        } catch (parseError) {
-                            console.log('Could not parse response as JSON:', parseError);
-                            // If response is not JSON, assume it's successful
-                            return { success: true };
-                        }
-                    });
+                // Use GET request with URL parameters to avoid CORS issues
+                const params = new URLSearchParams({
+                    timestamp: sheetData.timestamp,
+                    fullName: sheetData.fullName,
+                    title: sheetData.title,
+                    institution: sheetData.institution,
+                    email: sheetData.email,
+                    phone: sheetData.phone,
+                    country: sheetData.country,
+                    expertise: sheetData.expertise,
+                    interests: sheetData.interests
+                });
+
+                return fetch(`${GOOGLE_SCRIPT_URL}?${params}`, {
+                    method: 'GET',
+                    mode: 'no-cors'
+                }).then(() => {
+                    // With no-cors mode, we can't read the response, so assume success
+                    return { success: true };
                 });
             };
 
