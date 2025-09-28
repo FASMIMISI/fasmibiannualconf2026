@@ -915,39 +915,37 @@
 
             // Send to Google Sheets via Google Apps Script
             const sendToGoogleSheets = () => {
-                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLQCaX55w83CC010zXPqC1nzfM6Uwrt6VCY7qIzOMgzIH7ETFkEuEf2oa0sVb1VrCddg/exec';
+                const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyTM6s_fotVsCuQcoGLf0Rciigc5a-p0k039vhqRk9Eoy6mVGsWP2ABZ-BRQizjeVKA6w/exec';
                 
                 console.log('Sending to Google Sheets:', GOOGLE_SCRIPT_URL);
                 console.log('Data being sent:', sheetData);
 
                 return fetch(GOOGLE_SCRIPT_URL, {
                     method: 'POST',
+                    mode: 'cors',
                     headers: {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify(sheetData)
-                }).then(response => {
+                })
+                .then(response => {
                     console.log('Google Sheets response status:', response.status);
                     console.log('Google Sheets response ok:', response.ok);
                     
                     if (!response.ok) {
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                        return response.text().then(text => {
+                            console.error('Google Sheets error response:', text);
+                            throw new Error(text || `HTTP ${response.status}: ${response.statusText}`);
+                        });
                     }
-                    return response.text().then(text => {
-                        console.log('Google Sheets response text:', text);
-                        try {
-                            const result = JSON.parse(text);
-                            console.log('Google Sheets parsed result:', result);
-                            if (!result.success) {
-                                throw new Error('Script returned error: ' + (result.error || 'Unknown error'));
-                            }
-                            return result;
-                        } catch (parseError) {
-                            console.log('Could not parse response as JSON:', parseError);
-                            // If response is not JSON, assume it's successful
-                            return { success: true };
-                        }
-                    });
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Google Sheets success:', data);
+                    if (data && data.result === 'error') {
+                        throw new Error(data.error || 'Unknown error from Google Script');
+                    }
+                    return { success: true };
                 });
             };
 
