@@ -913,18 +913,17 @@
             
             console.log('Form data collected:', sheetData);
 
-            // Send to Google Sheets via a serverless function
+            // Send to Google Sheets directly
             const sendToGoogleSheets = async () => {
                 try {
-                    // First, try to send the data to the serverless function
-                    const response = await fetch('https://api.allorigins.win/raw?url=' + 
-                        encodeURIComponent('https://script.google.com/macros/s/AKfycbx0RG-4Rjwnnjw8jDomfIyxCbPa0DC7EF-dj9ossgTqQvm-vQOkBB66Nvpg-2jyFoLK2g/exec'), 
+                    const response = await fetch(
+                        'https://script.google.com/macros/s/AKfycbx0RG-4Rjwnnjw8jDomfIyxCbPa0DC7EF-dj9ossgTqQvm-vQOkBB66Nvpg-2jyFoLK2g/exec',
                         {
                             method: 'POST',
-                            headers: {
-                                'Content-Type': 'application/x-www-form-urlencoded',
+                            headers: { 
+                                'Content-Type': 'application/json' 
                             },
-                            body: new URLSearchParams(sheetData).toString()
+                            body: JSON.stringify(sheetData)
                         }
                     );
 
@@ -933,11 +932,11 @@
                         throw new Error(`HTTP error! status: ${response.status}, ${errorText}`);
                     }
 
-                    const result = await response.text();
-                    console.log('Serverless function response:', result);
-                    return { success: true };
+                    const result = await response.json();
+                    console.log('Google Sheets response:', result);
+                    return result;
                 } catch (error) {
-                    console.error('Error sending to serverless function:', error);
+                    console.error('Error sending to Google Sheets:', error);
                     throw error; // Re-throw to trigger the fallback
                 }
             };
