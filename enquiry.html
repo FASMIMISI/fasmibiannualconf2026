@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsorship Enquiry | FASMI Biennial Meeting 2026</title>
+    <meta name="description" content="Submit a sponsorship enquiry for the FASMI Biennial Meeting 2026.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="icon" href="assets/images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body>
+
+    <!-- ═══ NAVBAR ═══ -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="container">
+            <a href="index.html" class="navbar-logo">
+                <img src="assets/images/logo.jpg" alt="FASMI 2026">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="program.html">Program</a>
+                <a href="speakers.html">Speakers</a>
+                <a href="sponsorship.html">Sponsorship</a>
+                <a href="registration.html" class="btn btn-primary btn-sm">Register Now</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ═══ PAGE HERO ═══ -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Sponsorship Enquiry</h1>
+            <p>Tell us about your interest and we'll get back to you with a tailored proposal.</p>
+        </div>
+    </section>
+
+    <!-- ═══ ENQUIRY FORM ═══ -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom:40px;">
+                <span class="section-label">Get In Touch</span>
+                <h2 class="section-title">Submit Your Enquiry</h2>
+                <p class="section-subtitle">Interested in sponsoring FASMI 2026? Fill in the details below and our team
+                    will reach out with all the information you need.</p>
+            </div>
+
+            <div class="form-container animate-on-scroll">
+                <form id="enquiryForm" novalidate>
+
+                    <div class="form-group">
+                        <label for="contactName">Contact Name <span class="required">*</span></label>
+                        <input type="text" id="contactName" name="contactName" placeholder="Enter your full name"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="contactEmail">Email Address <span class="required">*</span></label>
+                        <input type="email" id="contactEmail" name="contactEmail" placeholder="your.email@company.com"
+                            required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="companyName">Company / Organization <span class="required">*</span></label>
+                        <input type="text" id="companyName" name="companyName"
+                            placeholder="Your company or organization name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="designation">Designation <span class="required">*</span></label>
+                        <input type="text" id="designation" name="designation"
+                            placeholder="e.g. Marketing Director, CEO" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="country">Country <span class="required">*</span></label>
+                        <input type="text" id="country" name="country" placeholder="e.g. India, Japan, USA" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="sponsorTier">Sponsorship Tier of Interest <span class="required">*</span></label>
+                        <select id="sponsorTier" name="sponsorTier" required>
+                            <option value="" disabled>Select a tier</option>
+                            <option value="Diamond">Diamond — ₹10,00,000 / $11,500</option>
+                            <option value="Platinum">Platinum — ₹8,00,000 / $9,000</option>
+                            <option value="Gold">Gold — ₹6,00,000 / $7,000</option>
+                            <option value="Silver">Silver — ₹4,00,000 / $4,500</option>
+                            <option value="Bronze">Bronze — ₹3,00,000 / $3,500</option>
+                            <option value="Non-Tiered">Non-Tiered (Lunch / Keynote / Award / etc.)</option>
+                            <option value="Custom">Custom Package</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span
+                                style="color:var(--text-muted); font-weight:400;">(optional)</span></label>
+                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message <span
+                                style="color:var(--text-muted); font-weight:400;">(optional)</span></label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Any specific questions or requirements..." style="resize:vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary form-submit btn-lg" id="enquirySubmitBtn">
+                        Submit Enquiry
+                    </button>
+
+                    <div class="form-message" id="enquiryMessage"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══ BACK TO SPONSORSHIP ═══ -->
+    <section class="section section--light text-center" style="padding:40px 0;">
+        <div class="container">
+            <a href="sponsorship.html" class="btn btn-outline">← Back to Sponsorship Packages</a>
+        </div>
+    </section>
+
+    <!-- ═══ FOOTER ═══ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="assets/images/logo.jpg" alt="FASMI 2026">
+                    <p>FASMI Biennial Meeting 2026 is Asia's premier molecular imaging conference hosted in Hyderabad,
+                        India.</p>
+                </div>
+                <div>
+                    <h4>Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="index.html#about">About</a>
+                        <a href="program.html">Program</a>
+                        <a href="speakers.html">Speakers</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Get Involved</h4>
+                    <div class="footer-links">
+                        <a href="sponsorship.html">Sponsorship</a>
+                        <a href="registration.html">Registration</a>
+                        <a href="assets/docs/Sponsorship Proposal_1.pdf" target="_blank">Download Brochure</a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Organizers</h4>
+                    <div class="footer-links">
+                        <a href="https://www.f-asmi.org/" target="_blank">FASMI</a>
+                        <a href="https://www.mis-i.org/" target="_blank">MISI</a>
+                        <a href="https://www.osmania.ac.in/" target="_blank">Osmania University</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 FASMI Biennial Meeting. All rights reserved.</span>
+                <span>Hosted in Hyderabad, India</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Auto-select tier from query string (e.g. ?tier=Diamond)
+        (function () {
+            const params = new URLSearchParams(window.location.search);
+            const tier = params.get('tier');
+            if (tier) {
+                const select = document.getElementById('sponsorTier');
+                if (select) {
+                    for (let opt of select.options) {
+                        if (opt.value === tier) {
+                            opt.selected = true;
+                            break;
+                        }
+                    }
+                }
+            }
+        })();
+    </script>
+</body>
+
+</html>
