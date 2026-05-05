@@ -1185,6 +1185,101 @@
     margin: 0 auto;
 }
 
+/* ── Speakers List ── */
+.speaker-card {
+    background: var(--bg-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.speaker-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-blue);
+}
+
+.speaker-card.horiz {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    padding: 40px;
+}
+
+.speaker-card .speaker-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--bg-white);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.speaker-card .speaker-info {
+    flex: 1;
+}
+
+.speaker-card .speaker-name {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+}
+
+.speaker-card .speaker-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--accent-orange);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.speaker-card .speaker-bio p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 14px;
+}
+
+.speaker-card .speaker-bio p:last-child {
+    margin-bottom: 0;
+}
+
+/* Advisory Committee Specifics */
+.speaker-card.vert {
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.speaker-card.vert .speaker-img {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 24px;
+}
+
+.speaker-card.vert .speaker-name {
+    font-size: 1.3rem;
+}
+
+.speaker-card.vert .speaker-title {
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.speaker-card.vert .speaker-bio p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
 /* ── Responsive Overrides ── */
 @media (max-width: 1024px) {
     .icon-grid {
@@ -1306,5 +1401,18 @@
 
     .btn {
         text-align: center;
+    }
+
+    .speaker-card.horiz {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+        gap: 24px;
+    }
+
+    .speaker-card .speaker-img {
+        width: 140px;
+        height: 140px;
     }
 }
