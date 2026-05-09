@@ -6,13 +6,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speakers | FASMI Biennial Meeting 2026</title>
     <meta name="description"
-        content="Speakers at the FASMI Biennial Meeting 2026 — internationally renowned experts in molecular imaging.">
+        content="Speakers, advisory committee, and organising committee for the FASMI Biennial Meeting 2026 — internationally renowned experts in molecular imaging.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="icon" href="assets/images/logo.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
+    <style>
+        /* ── People grid layout ── */
+        .people-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 36px 24px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        /* Featured (single) card — slightly larger */
+        .people-grid.featured {
+            gap: 0;
+        }
+
+        .people-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 210px;
+        }
+
+        .people-card.wide {
+            width: 240px;
+        }
+
+        .people-photo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top;
+            border: 3px solid var(--primary-blue, #1a73e8);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+            background: #e8edf3;
+            flex-shrink: 0;
+        }
+
+        .people-photo.large {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* Placeholder avatar when no photo */
+        .people-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-blue, #1a73e8);
+            background: linear-gradient(135deg, #c8d8f0 0%, #9fb8e0 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.4rem;
+            color: #4a6fa5;
+            flex-shrink: 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+        }
+
+        .people-name {
+            margin-top: 14px;
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--text-dark, #1a1a2e);
+            line-height: 1.3;
+        }
+
+        .people-affil {
+            margin-top: 4px;
+            font-size: 0.78rem;
+            color: var(--text-muted, #6b7280);
+            line-height: 1.55;
+            text-align: center;
+            width: 100%;
+        }
+
+        .people-country {
+            margin-top: 2px;
+            font-size: 0.75rem;
+            color: var(--primary-blue, #1a73e8);
+            font-weight: 500;
+        }
+
+        /* Section divider styling */
+        .speakers-section {
+            padding: 60px 0 40px;
+        }
+
+        .speakers-section + .speakers-section {
+            border-top: 1px solid #e8ecf3;
+        }
+
+        .section-badge {
+            display: inline-block;
+            background: var(--primary-blue, #1a73e8);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            padding: 10px 28px;
+            border-radius: 30px;
+            margin-bottom: 10px;
+        }
+
+        .section-badge.gold {
+            background: linear-gradient(135deg, #b8860b, #d4a017);
+        }
+
+        .section-badge.silver {
+            background: linear-gradient(135deg, #607080, #8a9ab0);
+        }
+
+        .section-badge.teal {
+            background: linear-gradient(135deg, #0d7377, #14a085);
+        }
+
+        .section-badge.indigo {
+            background: linear-gradient(135deg, #3d5a80, #6a8caf);
+        }
+
+        .section-badge.burgundy {
+            background: linear-gradient(135deg, #7b2d42, #a64d6a);
+        }
+    </style>
 </head>
 
 <body>
@@ -26,7 +152,7 @@
             <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="index.html#about">About</a>
-                <a href="program.html">Program</a>
+                <a href="program.html">Programme</a>
                 <a href="speakers.html" class="active">Speakers</a>
                 <a href="sponsorship.html">Sponsorship</a>
                 <a href="registration.html" class="btn btn-primary btn-sm">Register</a>
@@ -45,197 +171,198 @@
         </div>
     </section>
 
-    <!-- ═══ SPEAKERS LIST ═══ -->
-    <section class="section">
+    <!-- ═══ ALL SPEAKERS SECTIONS ═══ -->
+    <div style="background:#fff;">
         <div class="container">
-            <div class="text-center">
-                <h2 class="section-title">Keynote Speakers</h2>
-            </div>
-            <div class="speakers-grid" style="display: flex; flex-direction: column; gap: 40px; margin-top: 40px;">
 
-                <div class="speaker-card horiz">
-                    <img src="assets/images/Dr. Ramasamy Paulmurugan .png" alt="Dr. Ramasamy Paulmurugan"
-                        class="speaker-img">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">Dr. Ramasamy Paulmurugan</h3>
-                        <p class="speaker-title">Professor of Radiology, Stanford University</p>
-                        <div class="speaker-bio">
-                            <p>Dr. Ramasamy Paulmurugan is a core faculty member of the Molecular Imaging Program at
-                                Stanford (MIPS). A pioneer in split reporter protein complementation technologies, his
-                                work has significantly advanced real time visualization of cellular signaling in living
-                                systems.</p>
-                            <p>He leads the Cellular Pathway Imaging Laboratory (CPIL), where his research focuses on
-                                multimodality in vivo imaging, gene and microRNA based cancer theranostics—particularly
-                                for TNBC and Glioblastoma—and ultrasound responsive nanoplatforms for targeted drug
-                                delivery and immunotherapy.</p>
-                            <p>Dr. Paulmurugan earned his Ph.D. in Molecular Virology from the University of Madras and
-                                completed postdoctoral training at UCLA and Stanford. He has published over 150 peer
-                                reviewed papers, holds multiple international patents, and is a recipient of the
-                                Distinguished Investigator Award from the Academy for Radiology & Biomedical Imaging
-                                Research.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-card horiz">
-                    <img src="assets/images/Dr. Xiaowei Wang .png" alt="Dr. Xiaowei Wang" class="speaker-img">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">Dr. Xiaowei Wang</h3>
-                        <p class="speaker-title">Cardiovascular Scientist, Baker Heart and Diabetes Institute</p>
-                        <div class="speaker-bio">
-                            <p>Dr. Xiaowei Wang holds academic appointments at Monash University and the University of
-                                Melbourne. Her research integrates molecular imaging, vascular biology, and RNA based
-                                therapeutics to advance understanding and treatment of cardiovascular and
-                                cardiometabolic disease.</p>
-                            <p>She leads a multidisciplinary program in Molecular Imaging and Nanotherapeutics, focusing
-                                on multimodality preclinical imaging (MRI, ultrasound, PET, microCT, fluorescence, and
-                                photoacoustic imaging), targeted drug and mRNA delivery systems, and translational
-                                strategies for atherosclerosis, thrombosis, and heart failure.</p>
-                            <p>Dr. Wang earned her Ph.D. from Monash University, building on earlier clinical training
-                                as a cardiac technologist. She has received extensive recognition, including 14 Young
-                                Investigator Awards, 18 research prizes, and a National Heart Foundation Future Leader
-                                Fellowship, which includes the Paul Korner Innovation Award.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-card horiz">
-                    <img src="assets/images/Dr. Abhijit De .png" alt="Dr. Abhijit De" class="speaker-img">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">Dr. Abhijit De</h3>
-                        <p class="speaker-title">Scientific Officer (G), ACTREC, Tata Memorial Centre</p>
-                        <div class="speaker-bio">
-                            <p>Dr. Abhijit De leads the Molecular Functional Imaging Laboratory. He previously held
-                                research appointments at Stanford University and UCLA, contributing to his international
-                                profile in molecular imaging and translational oncology.</p>
-                            <p>His research focuses on developing molecular imaging probes, multimodality reporter
-                                systems, and targeted nanomedicine platforms to study tumor signaling, therapy
-                                resistance, and precision cancer therapeutics. His laboratory has filed and secured
-                                multiple patents, including a U.S. patent on BRET technology licensed from Stanford
-                                University.</p>
-                            <p>Dr. De earned his Ph.D. from Banaras Hindu University and completed postdoctoral training
-                                at CCMB, UCLA, and Stanford. He has authored over 100 peer reviewed publications, holds
-                                an h index of 42, and has over 10,000 citations. He received the Best Teacher Award from
-                                the Tata Memorial Centre in 2025.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-card horiz">
-                    <img src="assets/images/Dr. Kumaraswamy Thangaraj .png" alt="Dr. Kumaraswamy Thangaraj"
-                        class="speaker-img">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">Dr. Kumaraswamy Thangaraj</h3>
-                        <p class="speaker-title">Senior Principal Scientist, CCMB Hyderabad</p>
-                        <div class="speaker-bio">
-                            <p>Dr. Kumaraswamy Thangaraj is a leading Indian geneticist and molecular biologist. His
-                                research has significantly advanced the understanding of human genetic diversity,
-                                population history, and the molecular basis of inherited diseases across South Asia.</p>
-                            <p>He leads a multidisciplinary research program focused on human evolutionary genetics,
-                                disease associated gene discovery, and the application of genomic tools to study
-                                population structure, migration, and health disparities. His work has provided major
-                                insights into mitochondrial DNA variation, Y chromosome phylogeny, and the genetic
-                                origins of diverse Indian populations.</p>
-                            <p>Dr. Thangaraj earned his Ph.D. in Human Genetics from the University of Madras. He has
-                                authored over 200 peer reviewed publications, with more than 20,000 citations. His
-                                honors include the Padma Shri (2026), Rashtriya Vigyan Puraskar and the Shanti Swarup
-                                Bhatnagar Prize.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-card horiz">
-                    <img src="assets/images/rao papineni.png" alt="Dr. Rao V. L. Papineni" class="speaker-img">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">Dr. Rao V. L. Papineni</h3>
-                        <p class="speaker-title">Adjunct Faculty, University of Kansas Medical Center</p>
-                        <div class="speaker-bio">
-                            <p>Dr. Rao V. L. Papineni is a distinguished scientist and innovator in the fields of
-                                nanotechnology, radiation oncology, and molecular imaging. He has held significant
-                                leadership roles in the biomedical industry, notably with Carestream Molecular Imaging.
-                            </p>
-                            <p>He leads a pioneering research agenda focused on radiobiophotonics, the application of
-                                gold-based nanoparticles for radiotherapy enhancement, and the use of metabolic
-                                inhibitors like 2-Deoxy-D-glucose (2-DG) as radioprotectors and chemosensitizers. His
-                                multidisciplinary work encompasses the design of non-viral vectors for gene delivery,
-                                image-guided cell-based therapies, and the development of novel contrast agents.</p>
-                            <p>Dr. Papineni has built a robust portfolio of intellectual property, holding several
-                                patents related to vibration-induced substance targeting and high-capacity delivery
-                                vectors. He has authored numerous peer-reviewed publications and has been a frequent
-                                speaker at international symposia.</p>
-                        </div>
+            <!-- ── 1. Dr. Sam Gambhir Memorial Lecture ── -->
+            <div class="speakers-section text-center animate-on-scroll">
+                <span class="section-badge gold">Dr. Sam Gambhir Memorial Lecture</span>
+                <div class="people-grid featured" style="justify-content:center; margin-top:24px;">
+                    <div class="people-card wide">
+                        <img src="assets/images/Dr. Ramasamy Paulmurugan .png"
+                            alt="Dr. Ramasamy Paulmurugan"
+                            class="people-photo large">
+                        <p class="people-name">Dr. Ramasamy Paulmurugan</p>
+                        <p class="people-affil">Professor of Radiology<br>Stanford University</p>
+                        <p class="people-country">USA</p>
                     </div>
                 </div>
             </div>
 
-            <div class="text-center" style="margin-top: 80px;">
-                <h2 class="section-title">Advisory Committee</h2>
-            </div>
-            <div class="speakers-grid" style="display: flex; flex-direction: column; gap: 40px; margin-top: 40px;">
-                <div class="speaker-card horiz">
-                    <img src="assets/images/Dr. Mikako Ogawa .png" alt="Dr. Mikako Ogawa" class="speaker-img">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">Dr. Mikako Ogawa</h3>
-                        <p class="speaker-title">Professor, Hokkaido University</p>
-                        <div class="speaker-bio">
-                            <p>Dr. Mikako Ogawa is a Professor at Hokkaido University’s Faculty of Pharmaceutical
-                                Sciences and a Principal Investigator at the Institute for Chemical Reaction Design and
-                                Discovery (ICReDD). She previously held a research appointment at the National Cancer
-                                Institute (NCI/NIH), contributing to her international profile in chemical biology and
-                                molecular imaging.</p>
-                            <p>Her research focuses on developing innovative chemical probes and "smart" compounds to
-                                visualize and manipulate biomolecules using near-infrared light and radiation. Her
-                                laboratory is renowned for pioneering work in photoimmunotherapy and X-ray-triggered
-                                drug release, and she has secured multiple patents for her advancements in nanoparticle
-                                contrast agents.</p>
-                            <p>Dr. Ogawa earned her Ph.D. in Pharmaceutical Sciences and has authored high-impact
-                                publications in journals such as Nature Medicine. Her contributions have been recognized
-                                with several honors, including the 2022 Mizushima Award from the Japan Society of Drug
-                                Delivery System.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-card horiz">
-                    <img src="assets/images/Dr. Ichio Aoki .png" alt="Dr. Ichio Aoki" class="speaker-img">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">Dr. Ichio Aoki</h3>
-                        <p class="speaker-title">Senior Principal Investigator, QST Japan</p>
-                        <div class="speaker-bio">
-                            <p>Dr. Ichio Aoki is a Senior Principal Investigator at the Institute for Quantum Medical
-                                Science (iQMS), National Institutes for Quantum Science and Technology (QST), Japan. His
-                                research focuses on developing functional and molecular MRI techniques, specifically
-                                pioneering the use of manganese-enhanced MRI and theranostic nanoparticles to visualize
-                                biological processes and enable targeted drug delivery.</p>
-                            <p>He earned his Ph.D. from the Meiji University of Oriental Medicine and completed his
-                                postdoctoral training at the National Institutes of Health (NIH) in the USA. Dr. Aoki
-                                has published extensively in the fields of molecular imaging and quantum medicine and
-                                serves as the President-elect of the Japanese Society for Molecular Imaging (JSMI).</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="speaker-card horiz">
-                    <img src="assets/images/Dr. Deepak Behera .png" alt="Dr. Deepak Behera" class="speaker-img">
-                    <div class="speaker-info">
-                        <h3 class="speaker-name">Dr. Deepak Behera</h3>
-                        <p class="speaker-title">President & CEO, Adaptive Research Inc</p>
-                        <div class="speaker-bio">
-                            <p>Dr. Deepak Behera is a nuclear medicine physician-scientist and the President & CEO of
-                                Adaptive Research Inc (USA). His research and clinical focus center on the advancement
-                                of molecular imaging technologies and radiopharmaceuticals, with significant
-                                contributions to early-phase clinical trials, medical affairs, and the launch of
-                                innovative radioligand therapies.</p>
-                            <p>He earned his MD in Nuclear Medicine from the National Board of Examinations, India, and
-                                held a tenure at the Stanford University School of Medicine within the Molecular Imaging
-                                Program at Stanford (MIPS). Dr. Behera has published over 20 peer-reviewed articles and
-                                remains a key leader in the global molecular imaging community through his leadership
-                                roles in EPPIC Global and the Indo-American Society of Nuclear Medicine (IASNM).</p>
-                        </div>
+            <!-- ── 2. Keynote Speakers ── -->
+            <div class="speakers-section text-center animate-on-scroll">
+                <span class="section-badge">Keynote Speakers</span>
+                <div class="people-grid" style="justify-content:center; margin-top:24px;">
+                    <div class="people-card">
+                        <img src="assets/images/Dr. Abhijit De .png"
+                            alt="Dr. Abhijit De"
+                            class="people-photo">
+                        <p class="people-name">Dr. Abhijit De</p>
+                        <p class="people-affil">Scientific Officer (G), ACTREC<br>Tata Memorial Centre</p>
+                        <p class="people-country">India</p>
                     </div>
                 </div>
             </div>
-    </section>
+
+            <!-- ── 3. Invited Speakers & Expert Panelists ── -->
+            <div class="speakers-section text-center animate-on-scroll">
+                <span class="section-badge teal">Invited Speakers &amp; Expert Panelists</span>
+                <div class="people-grid" style="margin-top:24px;">
+                    <div class="people-card">
+                        <img src="assets/images/Dr. Kumaraswamy Thangaraj .png"
+                            alt="Dr. Kumaraswamy Thangaraj"
+                            class="people-photo">
+                        <p class="people-name">Dr. Kumaraswamy Thangaraj</p>
+                        <p class="people-affil">Senior Principal Scientist<br>CCMB Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/Dr. Xiaowei Wang .png"
+                            alt="Dr. Xiaowei Wang"
+                            class="people-photo">
+                        <p class="people-name">Dr. Xiaowei Wang</p>
+                        <p class="people-affil">Professor and Cardiovascular Scientist<br>Baker Heart &amp; Diabetes Institute</p>
+                        <p class="people-country">Australia</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/rao papineni.png"
+                            alt="Dr. Rao V. L. Papineni"
+                            class="people-photo">
+                        <p class="people-name">Dr. Rao V. L. Papineni</p>
+                        <p class="people-affil">Adjunct Faculty<br>University of Kansas Medical Center</p>
+                        <p class="people-country">USA</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 4. Chief Patrons ── -->
+            <div class="speakers-section text-center animate-on-scroll">
+                <span class="section-badge silver">Chief Patrons</span>
+                <div class="people-grid" style="justify-content:center; margin-top:24px;">
+                    <div class="people-card">
+                        <img src="assets/images/moore-anna.png"
+                            alt="Dr. Anna Moore"
+                            class="people-photo">
+                        <p class="people-name">Dr. Anna Moore</p>
+                        <p class="people-affil">Professor, Michigan State University<br>President, WMIS</p>
+                        <p class="people-country">USA</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/vc.jpg"
+                            alt="Prof. Kumar Molugaram"
+                            class="people-photo">
+                        <p class="people-name">Prof. Kumar Molugaram</p>
+                        <p class="people-affil">Vice-Chancellor<br>Osmania University</p>
+                        <p class="people-country">India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 5. Advisory Committee ── -->
+            <div class="speakers-section text-center animate-on-scroll">
+                <span class="section-badge indigo">Advisory Committee</span>
+                <div class="people-grid" style="justify-content:center; margin-top:24px;">
+                    <div class="people-card">
+                        <img src="assets/images/Dr. Ichio Aoki .png"
+                            alt="Dr. Ichio Aoki"
+                            class="people-photo">
+                        <p class="people-name">Dr. Ichio Aoki</p>
+                        <p class="people-affil">Senior Principal Investigator<br>QST — National Institutes for<br>Quantum Science and Technology</p>
+                        <p class="people-country">Japan</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/Dr. Mikako Ogawa .png"
+                            alt="Dr. Mikako Ogawa"
+                            class="people-photo">
+                        <p class="people-name">Dr. Mikako Ogawa</p>
+                        <p class="people-affil">Professor<br>Hokkaido University</p>
+                        <p class="people-country">Japan</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/Peter-Karlheinz.jpg"
+                            alt="Professor Karlheinz Peter"
+                            class="people-photo">
+                        <p class="people-name">Prof. Karlheinz Peter</p>
+                        <p class="people-affil">Deputy Director, Discovery Science<br>&amp; Head, Atherothrombosis &amp; Vascular Biology Lab<br>Baker Heart and Diabetes Institute</p>
+                        <p class="people-country">Australia</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 6. Organising Committee ── -->
+            <div class="speakers-section text-center animate-on-scroll" style="padding-bottom:80px;">
+                <span class="section-badge burgundy">Organising Committee</span>
+                <div class="people-grid" style="margin-top:24px;">
+                    <div class="people-card">
+                        <img src="assets/images/uday.jpg"
+                            alt="Dr. Uday Krishnamurthy"
+                            class="people-photo">
+                        <p class="people-name">Dr. Uday Krishnamurthy</p>
+                        <p class="people-affil">President, FASMI<br>Professor of Practice, Dept. of Biomedical Engineering<br>Osmania University, Hyderabad, India<br>GE HealthCare, USA</p>
+                        <p class="people-country">India / USA</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/jyotsna.jpeg"
+                            alt="Dr. Jyotsna Rao"
+                            class="people-photo">
+                        <p class="people-name">Dr. Jyotsna Rao</p>
+                        <p class="people-affil">President, MISI<br>Nuclear Medicine<br>Apollo Hospitals<br>Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/suman.png"
+                            alt="Dr. Suman Reddy"
+                            class="people-photo">
+                        <p class="people-name">Dr. Suman Reddy</p>
+                        <p class="people-affil">Professor<br>Dept. of Biomedical Engineering<br>UCE, Osmania University</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/principal.jpg"
+                            alt="Dr. P. Chandra Sekhar"
+                            class="people-photo">
+                        <p class="people-name">Dr. P. Chandra Sekhar</p>
+                        <p class="people-affil">Principal<br>University College of Engineering<br>Osmania University</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/Anusha Malapaka.jpeg"
+                            alt="Anusha Malapaka"
+                            class="people-photo">
+                        <p class="people-name">Anusha Malapaka</p>
+                        <p class="people-affil">PhD Candidate<br>Queensland Brain Institute</p>
+                        <p class="people-country">Australia</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/eesha.jpeg"
+                            alt="Dr. Eeshitha Chinthoju"
+                            class="people-photo">
+                        <p class="people-name">Dr. Eeshitha Chinthoju</p>
+                        <p class="people-affil">Clinical Strategy<br>Dr. Reddy's Laboratories</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/abhinay.jpg"
+                            alt="Abhinay Joshi"
+                            class="people-photo">
+                        <p class="people-name">Abhinay Joshi</p>
+                        <p class="people-affil">Associate Director<br>Core Lab Operations, Asia Pacific<br>Medpace</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/prasanna.jpg"
+                            alt="Prasanna Devika"
+                            class="people-photo">
+                        <p class="people-name">Prasanna Devika</p>
+                        <p class="people-affil">Student<br>Osmania University</p>
+                        <p class="people-country">Hyderabad, India</p>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- /container -->
+    </div>
 
     <!-- ═══ CTA ═══ -->
     <section class="cta-banner">
@@ -263,9 +390,8 @@
                     <div class="footer-links">
                         <a href="index.html">Home</a>
                         <a href="index.html#about">About</a>
-                        <a href="program.html">Program</a>
+                        <a href="program.html">Programme</a>
                         <a href="speakers.html">Speakers</a>
-                        <a href="advisory.html">Committee</a>
                     </div>
                 </div>
                 <div>
@@ -276,7 +402,7 @@
                     </div>
                 </div>
                 <div>
-                    <h4>Organizers & Supporters</h4>
+                    <h4>Organizers &amp; Supporters</h4>
                     <div class="footer-links">
                         <a href="https://www.f-asmi.org/" target="_blank">FASMI</a>
                         <a href="https://www.mis-i.org/" target="_blank">MISI</a>
