@@ -281,12 +281,177 @@
         }
 
         /* ══════════════════════════════════════
+           KEY DATES — table
+        ══════════════════════════════════════ */
+        .dates-section {
+            background: #fff;
+            padding: 64px 0;
+        }
+
+        .dates-table-wrap {
+            margin-top: 40px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(26,115,232,0.10);
+            border: 1px solid #e3eaf5;
+        }
+
+        .dates-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+        }
+
+        .dates-table thead tr {
+            background: linear-gradient(90deg, #0f1f40 0%, #1a3260 100%);
+        }
+
+        .dates-table thead th {
+            color: #c8d8f0;
+            font-size: 0.70rem;
+            font-weight: 700;
+            letter-spacing: 0.10em;
+            text-transform: uppercase;
+            padding: 16px 20px;
+            text-align: left;
+        }
+
+        .dates-table tbody tr {
+            border-bottom: 1px solid #e8eef8;
+            transition: background 0.18s ease;
+        }
+
+        .dates-table tbody tr:last-child {
+            border-bottom: none;
+        }
+
+        .dates-table tbody tr:hover {
+            background: #f3f7fe;
+        }
+
+        .dates-table td {
+            padding: 18px 20px;
+            vertical-align: top;
+            color: #3a4560;
+            line-height: 1.55;
+        }
+
+        /* accent dot column */
+        .td-dot {
+            width: 6px;
+            padding: 0 !important;
+        }
+
+        .dot-bar {
+            display: block;
+            width: 6px;
+            height: 100%;
+            min-height: 60px;
+        }
+
+        .dot-open     { background: linear-gradient(180deg, #1a73e8, #4fa3f7); }
+        .dot-deadline { background: linear-gradient(180deg, #c45e00, #e8850a); }
+        .dot-revised  { background: linear-gradient(180deg, #7b2d42, #c0546e); }
+        .dot-lba      { background: linear-gradient(180deg, #7b2d42, #c0546e); }
+        .dot-notify   { background: linear-gradient(180deg, #155c3a, #1e8a52); }
+        .dot-reg      { background: linear-gradient(180deg, #0d7377, #14a085); }
+        .dot-conf     { background: linear-gradient(180deg, #3d5a80, #6a8caf); }
+
+        .td-event {
+            font-weight: 700;
+            color: #1a1a2e;
+            white-space: nowrap;
+            min-width: 220px;
+        }
+
+        .td-date {
+            font-weight: 700;
+            white-space: nowrap;
+            min-width: 210px;
+        }
+
+        .date-open     { color: #1a73e8; }
+        .date-deadline { color: #c45e00; }
+        .date-revised  { color: #7b2d42; }
+        .date-lba      { color: #7b2d42; }
+        .date-notify   { color: #155c3a; }
+        .date-reg      { color: #0d7377; }
+        .date-conf     { color: #3d5a80; }
+
+        .td-desc {
+            font-size: 0.83rem;
+            color: #6b7a90;
+        }
+
+        /* alternating row shade */
+        .dates-table tbody tr:nth-child(even) {
+            background: #f8faff;
+        }
+        .dates-table tbody tr:nth-child(even):hover {
+            background: #eef3fd;
+        }
+
+        /* submit portal banner */
+        .portal-banner {
+            margin-top: 44px;
+            background: linear-gradient(135deg, #0f1f40 0%, #1a3260 100%);
+            border-radius: 16px;
+            padding: 32px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .portal-banner-text h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 6px;
+        }
+
+        .portal-banner-text p {
+            font-size: 0.88rem;
+            color: #b8c8e0;
+            margin: 0;
+        }
+
+        .btn-submit-portal {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #1a73e8, #4fa3f7);
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            padding: 14px 28px;
+            border-radius: 10px;
+            text-decoration: none;
+            white-space: nowrap;
+            box-shadow: 0 4px 16px rgba(26, 115, 232, 0.35);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .btn-submit-portal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(26, 115, 232, 0.5);
+        }
+
+        /* ══════════════════════════════════════
            RESPONSIVE
         ══════════════════════════════════════ */
         @media (max-width: 900px) {
             .abstract-intro { grid-template-columns: 1fr; gap: 32px; }
             .themes-grid    { grid-template-columns: repeat(2, 1fr); }
             .bottom-grid    { grid-template-columns: 1fr; }
+            .portal-banner  { flex-direction: column; align-items: flex-start; }
+        }
+
+        @media (max-width: 700px) {
+            .dates-table-wrap { overflow-x: auto; }
+            .td-event, .td-date { white-space: normal; min-width: unset; }
         }
 
         @media (max-width: 580px) {
@@ -454,6 +619,88 @@
         </div>
     </section>
 
+    <!-- ═══ KEY DATES ═══ -->
+    <section class="dates-section">
+        <div class="container">
+            <div class="text-center">
+                <span class="section-label">Important Dates</span>
+                <h2 class="section-title">Abstract Submission Timeline</h2>
+                <p class="section-subtitle">Plan ahead — all deadlines are firm. Times shown in IST (UTC+5:30).</p>
+            </div>
+
+            <div class="dates-table-wrap animate-on-scroll">
+                <table class="dates-table">
+                    <thead>
+                        <tr>
+                            <th style="width:6px;padding:0;"></th>
+                            <th>Milestone / Event</th>
+                            <th>Date &amp; Time</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="td-dot"><span class="dot-bar dot-open"></span></td>
+                            <td class="td-event">Abstract Submission Open</td>
+                            <td class="td-date date-open">June 15, 2026</td>
+                            <td class="td-desc">The first day authors can begin uploading or submitting their abstracts via the online portal.</td>
+                        </tr>
+                        <tr>
+                            <td class="td-dot"><span class="dot-bar dot-deadline"></span></td>
+                            <td class="td-event">Abstract Submission Deadline</td>
+                            <td class="td-date date-deadline">September 10, 2026<br><small style="font-weight:600;">12:00 PM IST</small></td>
+                            <td class="td-desc">The final date and time allowed for standard abstract submissions.</td>
+                        </tr>
+                        <tr>
+                            <td class="td-dot"><span class="dot-bar dot-revised"></span></td>
+                            <td class="td-event">Revised Abstract Submission Deadline <em style="font-weight:400;color:#8a9ab8;">(if applicable)</em></td>
+                            <td class="td-date date-revised">September 20, 2026<br><small style="font-weight:600;">12:00 PM IST</small></td>
+                            <td class="td-desc">The deadline by which authors must submit requested edits or corrections to their abstracts.</td>
+                        </tr>
+                        <tr>
+                            <td class="td-dot"><span class="dot-bar dot-lba"></span></td>
+                            <td class="td-event">Late-Breaking Abstract Deadline</td>
+                            <td class="td-date date-lba">September 20, 2026<br><small style="font-weight:600;">12:00 PM IST</small></td>
+                            <td class="td-desc">The final date and time to submit late-breaking or high-impact research.</td>
+                        </tr>
+                        <tr>
+                            <td class="td-dot"><span class="dot-bar dot-notify"></span></td>
+                            <td class="td-event">Notification of Acceptance / Rejection</td>
+                            <td class="td-date date-notify">September 25, 2026</td>
+                            <td class="td-desc">The date authors are notified whether their abstract is accepted, rejected, or conditionally accepted.</td>
+                        </tr>
+                        <tr>
+                            <td class="td-dot"><span class="dot-bar dot-reg"></span></td>
+                            <td class="td-event">Presenter / Author Registration Deadline</td>
+                            <td class="td-date date-reg">September 30, 2026<br><small style="font-weight:600;">12:00 PM IST</small></td>
+                            <td class="td-desc">The cut-off date for accepted presenters to register to ensure their presentation is not removed from the programme.</td>
+                        </tr>
+                        <tr>
+                            <td class="td-dot"><span class="dot-bar dot-conf"></span></td>
+                            <td class="td-event">Conference Dates</td>
+                            <td class="td-date date-conf">October 26 – 28, 2026</td>
+                            <td class="td-desc">The official start and end dates of the FASMI–MISI Biennial Conference in Hyderabad, India.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Abstract portal banner -->
+            <div class="portal-banner animate-on-scroll">
+                <div class="portal-banner-text">
+                    <h3><i class="fas fa-upload" style="margin-right:8px;color:#7ecfff;"></i>Abstract Submission Portal</h3>
+                    <p>Submissions are managed through the XCD System. Click the button to access the portal and begin your submission.</p>
+                </div>
+                <a href="https://www.xcdsystem.com/wmis/abstract/index.cfm?ID=uf6sp78"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn-submit-portal" id="submit-abstract-btn">
+                    <i class="fas fa-upload"></i> Submit Your Abstract
+                </a>
+            </div>
+
+        </div>
+    </section>
+
     <!-- ═══ BOTTOM — Open Topic + Indexing ═══ -->
     <section class="section" style="padding-top:0;">
         <div class="container">
@@ -493,9 +740,13 @@
     <section class="cta-banner">
         <div class="container">
             <h2>Ready to Submit Your Abstract?</h2>
-            <p>Join leading researchers, clinicians, and industry experts in Hyderabad, India — October 2026.</p>
+            <p>Join leading researchers, clinicians, and industry experts in Hyderabad, India — October 26–28, 2026.<br>
+               Submission opens <strong>June 15, 2026</strong> · Deadline <strong>September 10, 2026</strong>.</p>
             <div class="btn-group">
-                <a href="registration.html" class="btn btn-accent btn-lg">Register Now</a>
+                <a href="https://www.xcdsystem.com/wmis/abstract/index.cfm?ID=uf6sp78"
+                   target="_blank" rel="noopener noreferrer"
+                   class="btn btn-accent btn-lg" id="cta-submit-abstract">Submit Abstract</a>
+                <a href="registration.html" class="btn btn-secondary btn-lg">Register Now</a>
                 <a href="enquiry.html" class="btn btn-secondary btn-lg">Contact Us</a>
             </div>
         </div>
