@@ -41,84 +41,632 @@
     <!-- ═══ PAGE HERO ═══ -->
     <section class="page-hero">
         <div class="container">
-            <h1>Scientific Programme</h1>
-            <p>Four days of cutting-edge science, innovation, and collaboration in molecular imaging.</p>
+            <h1>Scientific Programme & Schedule</h1>
+            <p>FASMI Biennial Meeting 2026 • October 26–28, 2026 • Hyderabad, India</p>
         </div>
     </section>
 
-    <!-- ═══ PROGRAM OVERVIEW ═══ -->
-    <section class="section">
+    <!-- ═══ OFFICIAL SCIENTIFIC SCHEDULE ═══ -->
+    <section class="schedule-section" id="schedule">
         <div class="container">
-            <div class="text-center">
-                <span class="section-label">October 26 – 28, 2026</span>
-                <h2 class="section-title">Programme Highlights</h2>
-                <p class="section-subtitle">A dynamic program featuring world-class keynotes, interactive workshops,
-                    policy discussions, and unmatched networking opportunities.</p>
+            <div class="schedule-header">
+                <span class="section-label">FASMI BIENNIAL MEETING 2026</span>
+                <h2 class="section-title">Official Scientific Schedule</h2>
+                <p class="section-subtitle">Academic Symposia, Plenary Keynote Addresses, Memorial Lectures, and Career Panels.</p>
             </div>
 
-            <div class="grid" style="gap:20px; max-width:860px; margin:0 auto;">
+            <!-- Segmented Academic Day Selector -->
+            <div class="schedule-nav">
+                <button class="schedule-day-btn active" data-day="day1">
+                    <span class="day-tag">Day 1</span>
+                    <span class="day-title">Monday, Oct 26, 2026</span>
+                    <span class="day-sub">Educational & Opening Ceremony</span>
+                </button>
+                <button class="schedule-day-btn" data-day="day2">
+                    <span class="day-tag">Day 2</span>
+                    <span class="day-title">Tuesday, Oct 27, 2026</span>
+                    <span class="day-sub">Scientific Sessions & Memorial Lecture</span>
+                </button>
+                <button class="schedule-day-btn" data-day="day3">
+                    <span class="day-tag">Day 3</span>
+                    <span class="day-title">Wednesday, Oct 28, 2026</span>
+                    <span class="day-sub">Scientific Sessions & Closing Ceremony</span>
+                </button>
+                <button class="schedule-day-btn" data-day="all">
+                    <span class="day-tag">Overview</span>
+                    <span class="day-title">All 3 Days</span>
+                    <span class="day-sub">Full Conference Matrix</span>
+                </button>
+            </div>
 
-                <div class="session-card animate-on-scroll">
-                    <span class="session-icon"><i class="fas fa-microphone-lines"></i></span>
-                    <div>
-                        <h4>Keynote Lectures</h4>
-                        <p>Internationally renowned experts presenting the latest breakthroughs in molecular imaging
-                            research and clinical applications.</p>
-                    </div>
+            <!-- Academic Toolbar & Search Controls -->
+            <div class="schedule-controls">
+                <div class="schedule-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="scheduleSearchInput" placeholder="Filter by session code, topic, chair, speaker, or institution...">
                 </div>
 
-                <div class="session-card animate-on-scroll">
-                    <span class="session-icon"><i class="fas fa-microscope"></i></span>
-                    <div>
-                        <h4>Scientific & Technical Sessions</h4>
-                        <p>In-depth sessions covering advances in PET, SPECT, MRI, optical imaging, theranostics,
-                            AI-driven imaging, and more.</p>
-                    </div>
+                <div class="schedule-filters">
+                    <button class="filter-btn active" data-filter="all">All Tracks</button>
+                    <button class="filter-btn" data-filter="keynote"><i class="fas fa-star"></i> Keynotes</button>
+                    <button class="filter-btn" data-filter="session"><i class="fas fa-microscope"></i> Symposia</button>
+                    <button class="filter-btn" data-filter="panel"><i class="fas fa-comments"></i> Panels</button>
+                    <button class="filter-btn" data-filter="break"><i class="fas fa-coffee"></i> Breaks</button>
                 </div>
 
-                <div class="session-card animate-on-scroll">
-                    <span class="session-icon"><i class="fas fa-comments"></i></span>
-                    <div>
-                        <h4>Fireside Chats & Expert Panel Discussions</h4>
-                        <p>Candid, interactive conversations with leading scientists and clinicians on the future of
-                            precision medicine.</p>
+                <div class="action-btns-group">
+                    <button class="view-mode-btn" id="viewModeBtn" title="Toggle Compact / Detailed Timeline View">
+                        <i class="fas fa-bars-staggered"></i> Compact View
+                    </button>
+                    <button class="print-btn" id="printScheduleBtn" title="Print or Save Official Schedule PDF">
+                        <i class="fas fa-print"></i> Print PDF
+                    </button>
+                </div>
+            </div>
+
+            <!-- Timeline Panels Container -->
+            <div class="timeline-container">
+
+                <!-- ════ DAY 1 PANEL ════ -->
+                <div class="timeline-day-panel active" id="day-day1">
+                    <div class="timeline-day-banner">
+                        <div>
+                            <h3><i class="fas fa-calendar-day"></i> DAY 1: MONDAY, OCTOBER 26, 2026</h3>
+                            <p>Educational Sessions, Official Opening Ceremony & Keynote Address</p>
+                        </div>
+                        <span class="session-count-badge">4 Program Blocks</span>
                     </div>
+
+                    <!-- Item 1 -->
+                    <div class="agenda-item" data-category="ceremony">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 5:00 PM – 5:10 PM</span>
+                            <span class="agenda-badge badge-ceremony"><i class="fas fa-clipboard-check"></i> Opening</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">ADM-01 • Opening Remarks</div>
+                            <h3 class="agenda-title">Welcome & Book-keeping</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div>
+                                        <span class="leadership-role">Conference Chair:</span>
+                                        <span class="leadership-name">Dr. Uday Krishnamurthy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="agenda-item" data-category="ceremony">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 5:10 PM – 5:45 PM</span>
+                            <span class="agenda-badge badge-ceremony"><i class="fas fa-award"></i> Ceremony</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">CER-01 • Inaugural Program</div>
+                            <h3 class="agenda-title">Official Opening Ceremony</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <span class="leadership-role">Dignitaries:</span>
+                                        <span class="leadership-name">FASMI Leadership & Institutional Dignitaries</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 - Keynote -->
+                    <div class="agenda-item highlight-keynote" data-category="keynote">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 5:45 PM – 6:30 PM</span>
+                            <span class="agenda-badge badge-keynote"><i class="fas fa-star"></i> Plenary Keynote</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">KEY-01 • Opening Keynote Lecture</div>
+                            <h3 class="agenda-title">Opening Keynote Lecture</h3>
+                            <div class="agenda-subtitle">"The Evolving Scientist: Lessons from History, the Power of Mentorship, and Research in the Age of AI"</div>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-microphone"></i>
+                                    <div>
+                                        <span class="leadership-role">Keynote Speaker:</span>
+                                        <span class="leadership-name">Dr. Kumarasamy Thangaraj</span>
+                                        <span class="leadership-affil">(Padma Shri Awardee, Centre for Cellular and Molecular Biology - CCMB)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 - Welcome Dinner -->
+                    <div class="agenda-item highlight-break" data-category="break">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 6:30 PM Onwards</span>
+                            <span class="agenda-badge badge-break"><i class="fas fa-glass-cheers"></i> Reception</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">SOC-01 • Welcome Reception</div>
+                            <h3 class="agenda-title">Welcome Dinner & Networking Reception</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <span class="leadership-role">Participants:</span>
+                                        <span class="leadership-name">All Delegates & Honored Guests</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="agenda-location"><i class="fas fa-map-marker-alt"></i> Grand Banquet Hall & Gardens</div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="session-card animate-on-scroll">
-                    <span class="session-icon"><i class="fas fa-flask-vial"></i></span>
-                    <div>
-                        <h4>Hands-on Workshops & Training Sessions</h4>
-                        <p>Practical, skills-focused workshops designed for students and early-career researchers.</p>
+
+                <!-- ════ DAY 2 PANEL ════ -->
+                <div class="timeline-day-panel" id="day-day2">
+                    <div class="timeline-day-banner">
+                        <div>
+                            <h3><i class="fas fa-calendar-day"></i> DAY 2: TUESDAY, OCTOBER 27, 2026</h3>
+                            <p>Scientific Symposia, Named Memorial Lecture & Technical Exhibition</p>
+                        </div>
+                        <span class="session-count-badge">10 Program Blocks</span>
                     </div>
+
+                    <!-- Session 1 -->
+                    <div class="agenda-item" data-category="session">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 9:00 AM – 10:30 AM</span>
+                            <span class="agenda-badge badge-session"><i class="fas fa-flask"></i> Scientific Session</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">SES-01 • Nanotechnology</div>
+                            <h3 class="agenda-title">Scientific Session 1: Nanotechnology in Molecular Imaging</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Chair:</span>
+                                        <span class="leadership-name">Dr. Uma Krishnan</span>
+                                        <span class="leadership-affil">(SASTRA University, India)</span>
+                                    </div>
+                                </div>
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Co-Chair:</span>
+                                        <span class="leadership-name">Dr. Takashi Temma</span>
+                                        <span class="leadership-affil">(Kyoto University, Japan)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Session 2 -->
+                    <div class="agenda-item" data-category="session">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 10:30 AM – 12:00 PM</span>
+                            <span class="agenda-badge badge-session"><i class="fas fa-flask"></i> Scientific Session</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">SES-02 • Theranostics</div>
+                            <h3 class="agenda-title">Scientific Session 2: Theranostics</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Chair:</span>
+                                        <span class="leadership-name">Dr. Venkatesh Rangarajan</span>
+                                        <span class="leadership-affil">(Tata Memorial Hospital - TMH, President of SNMI)</span>
+                                    </div>
+                                </div>
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Co-Chair:</span>
+                                        <span class="leadership-name">Dr. Papineni Rao</span>
+                                        <span class="leadership-affil">(University of Kansas, USA)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Poster Hall Inauguration -->
+                    <div class="agenda-item" data-category="ceremony">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 12:00 PM – 12:30 PM</span>
+                            <span class="agenda-badge badge-ceremony"><i class="fas fa-ribbon"></i> Exhibition</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">EXH-01 • Poster & Exhibit Inauguration</div>
+                            <h3 class="agenda-title">Inauguration of Poster Hall & Technical Exhibits</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-landmark"></i>
+                                    <div>
+                                        <span class="leadership-role">Chief Guests:</span>
+                                        <span class="leadership-name">Telangana State Cabinet Minister & Senior Official from Educational Dept.</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="agenda-location"><i class="fas fa-map-marker-alt"></i> Technical Exhibition & Poster Pavilion</div>
+                        </div>
+                    </div>
+
+                    <!-- Luncheon Lecture -->
+                    <div class="agenda-item" data-category="session">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 12:30 PM – 1:30 PM</span>
+                            <span class="agenda-badge badge-session"><i class="fas fa-utensils"></i> Industry Symposium</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">IND-01 • Sponsored Luncheon Session</div>
+                            <h3 class="agenda-title">Industry-Sponsored Luncheon Lecture</h3>
+                            <div class="agenda-subtitle">Exhibition Hall - Sponsoring Partner Technology Presentation</div>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-building"></i>
+                                    <div>
+                                        <span class="leadership-role">Presenter:</span>
+                                        <span class="leadership-name">Industry Sponsoring Partner</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="agenda-location"><i class="fas fa-map-marker-alt"></i> Exhibition Hall Auditorium</div>
+                        </div>
+                    </div>
+
+                    <!-- Career Guidance Panel 1 -->
+                    <div class="agenda-item highlight-panel" data-category="panel">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 1:30 PM – 2:00 PM</span>
+                            <span class="agenda-badge badge-panel"><i class="fas fa-comments"></i> Career Panel</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">PNL-01 • Career Guidance Panel</div>
+                            <h3 class="agenda-title">Career Guidance Panel</h3>
+                            <div class="agenda-subtitle">"Careers for Imaging Scientists & Biomedical Engineers"</div>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-shield"></i>
+                                    <div>
+                                        <span class="leadership-role">Moderator:</span>
+                                        <span class="leadership-name">Dr. Uday Krishnamurthy</span>
+                                        <span class="leadership-affil">(FASMI President)</span>
+                                    </div>
+                                </div>
+                                <div class="leadership-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <span class="leadership-role">Panelists:</span>
+                                        <span class="leadership-name">Dr. Jaladhar Neelavalli (IIT-H), Dr. Kumar Moguram (Vice Chancellor, Osmania University (to be confirmed)), Dr. Renu John (IIT-H), Industry Experts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Session 3 -->
+                    <div class="agenda-item" data-category="session">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 2:00 PM – 3:30 PM</span>
+                            <span class="agenda-badge badge-session"><i class="fas fa-flask"></i> Scientific Session</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">SES-03 • Multimodal Imaging</div>
+                            <h3 class="agenda-title">Scientific Session 3: Multimodal Imaging</h3>
+                            <div class="agenda-subtitle">Ultrasound, Optoacoustics, and Hybrid Imaging Technologies</div>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Chair:</span>
+                                        <span class="leadership-name">Dr. Avinash Eranki</span>
+                                        <span class="leadership-affil">(IIT Hyderabad)</span>
+                                    </div>
+                                </div>
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Co-Chair:</span>
+                                        <span class="leadership-name">TBD</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sam Gambhir Memorial Lecture -->
+                    <div class="agenda-item highlight-memorial" data-category="keynote">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 3:30 PM – 4:30 PM</span>
+                            <span class="agenda-badge badge-memorial"><i class="fas fa-heart-pulse"></i> Memorial Oration</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">MEM-01 • Dr. Sam Gambhir Memorial Lecture</div>
+                            <h3 class="agenda-title">Dr. Sam Gambhir Memorial Lecture</h3>
+                            <div class="agenda-subtitle">"The Next Decade in Molecular Imaging"</div>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-microphone"></i>
+                                    <div>
+                                        <span class="leadership-role">Special Keynote Speaker:</span>
+                                        <span class="leadership-name">Dr. Ramasamy Paulmurugan</span>
+                                        <span class="leadership-affil">(Stanford University School of Medicine, USA)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Networking Coffee Break -->
+                    <div class="agenda-item highlight-break" data-category="break">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 4:30 PM – 4:45 PM</span>
+                            <span class="agenda-badge badge-break"><i class="fas fa-coffee"></i> Coffee Break</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <h3 class="agenda-title">Networking Coffee Break</h3>
+                            <div class="agenda-location"><i class="fas fa-map-marker-alt"></i> Exhibition & Poster Hall</div>
+                        </div>
+                    </div>
+
+                    <!-- Academic Career Panel -->
+                    <div class="agenda-item highlight-panel" data-category="panel">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 4:45 PM – 5:30 PM</span>
+                            <span class="agenda-badge badge-panel"><i class="fas fa-comments"></i> Academic Panel</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">PNL-02 • Post-Doc & Academic Development</div>
+                            <h3 class="agenda-title">Academic Career Guidance Panel</h3>
+                            <div class="agenda-subtitle">"Post-Doc Opportunities Abroad & Early-Career Faculty Development"</div>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <span class="leadership-role">Panelists:</span>
+                                        <span class="leadership-name">Invited Senior Academic Leadership & Mentors</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cultural Immersion Experience -->
+                    <div class="agenda-item highlight-break" data-category="break">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 5:30 PM – 6:15 PM</span>
+                            <span class="agenda-badge badge-break"><i class="fas fa-masks-theater"></i> Cultural Event</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">CUL-01 • Cultural Showcase</div>
+                            <h3 class="agenda-title">Cultural Immersion Experience</h3>
+                            <div class="agenda-subtitle">Traditional Indian Heritage Cultural Performance</div>
+                            <div class="agenda-location"><i class="fas fa-map-marker-alt"></i> Main Auditorium</div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <div class="session-card animate-on-scroll">
-                    <span class="session-icon"><i class="fas fa-landmark"></i></span>
-                    <div>
-                        <h4>Policy & Foresight Session</h4>
-                        <p>A unique session featuring government science administrators and the Telangana State Cabinet
-                            Minister (to be confirmed), discussing the policy landscape and future roadmap for molecular
-                            imaging in India
-                            and Asia.</p>
-                    </div>
-                </div>
 
-                <div class="session-card animate-on-scroll">
-                    <span class="session-icon"><i class="fas fa-handshake"></i></span>
-                    <div>
-                        <h4>Networking Events & Partner Engagements</h4>
-                        <p>Structured networking sessions connecting academia, industry, clinicians, and policymakers
-                            for meaningful collaborations.</p>
+                <!-- ════ DAY 3 PANEL ════ -->
+                <div class="timeline-day-panel" id="day-day3">
+                    <div class="timeline-day-banner">
+                        <div>
+                            <h3><i class="fas fa-calendar-day"></i> DAY 3: WEDNESDAY, OCTOBER 28, 2026</h3>
+                            <p>Scientific Symposia, Closing Keynote & Concluding Ceremony</p>
+                        </div>
+                        <span class="session-count-badge">9 Program Blocks</span>
                     </div>
-                </div>
 
-                <div class="session-card animate-on-scroll" style="border-left-color: var(--accent-orange);">
-                    <span class="session-icon"><i class="fas fa-award"></i></span>
-                    <div>
-                        <h4>Dr. Sam Gambhir Memorial Lecture</h4>
-                        <p>A special tribute lecture honouring the pioneer of molecular imaging — a cornerstone of the conference celebrating his contributions to the field.</p>
+                    <!-- Session 4 -->
+                    <div class="agenda-item" data-category="session">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 9:00 AM – 10:30 AM</span>
+                            <span class="agenda-badge badge-session"><i class="fas fa-flask"></i> Scientific Session</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">SES-04 • Non-Oncology Applications</div>
+                            <h3 class="agenda-title">Scientific Session 4: Non-Oncology Applications of Molecular Imaging</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Chair:</span>
+                                        <span class="leadership-name">Dr. Ann Marie Chacko</span>
+                                        <span class="leadership-affil">(National University of Singapore - NUS, Singapore)</span>
+                                    </div>
+                                </div>
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Co-Chair:</span>
+                                        <span class="leadership-name">Dr. Xiaowei Wang</span>
+                                        <span class="leadership-affil">(Monash University, Australia)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <!-- Session 5 -->
+                    <div class="agenda-item" data-category="session">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 10:30 AM – 12:00 PM</span>
+                            <span class="agenda-badge badge-session"><i class="fas fa-flask"></i> Scientific Session</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">SES-05 • MRI in Molecular Imaging</div>
+                            <h3 class="agenda-title">Scientific Session 5: MRI in Molecular Imaging</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Chair:</span>
+                                        <span class="leadership-name">Dr. Vikram Kodibagkar</span>
+                                        <span class="leadership-affil">(Arizona State University - ASU, USA)</span>
+                                    </div>
+                                </div>
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Co-Chair:</span>
+                                        <span class="leadership-name">Dr. Ichio Aoki</span>
+                                        <span class="leadership-affil">(National Institutes for Quantum Science and Technology - QST, Japan)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delegates Luncheon -->
+                    <div class="agenda-item highlight-break" data-category="break">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 12:00 PM – 1:00 PM</span>
+                            <span class="agenda-badge badge-break"><i class="fas fa-utensils"></i> Luncheon</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <h3 class="agenda-title">Delegates Luncheon</h3>
+                            <div class="agenda-location"><i class="fas fa-map-marker-alt"></i> Exhibition & Poster Hall</div>
+                        </div>
+                    </div>
+
+                    <!-- Poster Presentations -->
+                    <div class="agenda-item" data-category="session">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 1:00 PM – 1:30 PM</span>
+                            <span class="agenda-badge badge-session"><i class="fas fa-images"></i> Poster Session</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">POS-01 • Scientific Poster Session</div>
+                            <h3 class="agenda-title">Poster Presentations & Author Networking</h3>
+                            <div class="agenda-location"><i class="fas fa-map-marker-alt"></i> Exhibition & Poster Hall</div>
+                        </div>
+                    </div>
+
+                    <!-- Session 6 -->
+                    <div class="agenda-item" data-category="session">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 1:30 PM – 3:00 PM</span>
+                            <span class="agenda-badge badge-session"><i class="fas fa-brain"></i> Scientific Session</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">SES-06 • AI in Medical Imaging</div>
+                            <h3 class="agenda-title">Scientific Session 6: AI in Medical Imaging</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-tie"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Chair:</span>
+                                        <span class="leadership-name">Dr. Phaneendra Yalavarthy</span>
+                                        <span class="leadership-affil">(Indian Institute of Science - IISc, India)</span>
+                                    </div>
+                                </div>
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-check"></i>
+                                    <div>
+                                        <span class="leadership-role">Session Co-Chair:</span>
+                                        <span class="leadership-name">Dr. Amit Kharat</span>
+                                        <span class="leadership-affil">(DeepTek Medical Imaging)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Collaborations Guidance Panel -->
+                    <div class="agenda-item highlight-panel" data-category="panel">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 3:00 PM – 4:00 PM</span>
+                            <span class="agenda-badge badge-panel"><i class="fas fa-handshake"></i> Collaborations Panel</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">PNL-03 • Partnerships & Funding Panel</div>
+                            <h3 class="agenda-title">Collaborations Guidance Panel</h3>
+                            <div class="agenda-subtitle">"Establishing Collaborations, Academic-Industry Partnerships, Early-Career PhD Development, & Funding Opportunities"</div>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <span class="leadership-role">Panelists:</span>
+                                        <span class="leadership-name">Invited International Faculty & Industry Experts</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Awards Ceremony -->
+                    <div class="agenda-item" data-category="ceremony">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 4:00 PM – 4:30 PM</span>
+                            <span class="agenda-badge badge-ceremony"><i class="fas fa-trophy"></i> Awards</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">AWD-01 • Awards & Honors</div>
+                            <h3 class="agenda-title">Awards Ceremony & Concluding Remarks</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-user-shield"></i>
+                                    <div>
+                                        <span class="leadership-role">Leadership:</span>
+                                        <span class="leadership-name">FASMI Conference Executive Committee</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Closing Keynote -->
+                    <div class="agenda-item highlight-keynote" data-category="keynote">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 4:30 PM – 5:15 PM</span>
+                            <span class="agenda-badge badge-keynote"><i class="fas fa-star"></i> Closing Keynote</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">KEY-02 • Valedictory Keynote Address</div>
+                            <h3 class="agenda-title">Closing Keynote Address</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-microphone"></i>
+                                    <div>
+                                        <span class="leadership-role">Keynote Speaker:</span>
+                                        <span class="leadership-name">Dr. Abhijit De</span>
+                                        <span class="leadership-affil">(Advanced Centre for Treatment, Research and Education in Cancer - ACTREC, IIT Bombay)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formal Vote of Thanks -->
+                    <div class="agenda-item" data-category="ceremony">
+                        <div class="agenda-time-col">
+                            <span class="agenda-time-pill"><i class="far fa-clock"></i> 5:15 PM – 5:30 PM</span>
+                            <span class="agenda-badge badge-ceremony"><i class="fas fa-heart"></i> Valedictory</span>
+                        </div>
+                        <div class="agenda-content-col">
+                            <div class="agenda-session-code">VAL-01 • Formal Closing</div>
+                            <h3 class="agenda-title">Formal Vote of Thanks</h3>
+                            <div class="agenda-leadership">
+                                <div class="leadership-item">
+                                    <i class="fas fa-users"></i>
+                                    <div>
+                                        <span class="leadership-role">Leadership:</span>
+                                        <span class="leadership-name">World Molecular Imaging Society (WMIS) Leadership Representatives</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -128,11 +676,12 @@
     <!-- ═══ CTA ═══ -->
     <section class="cta-banner">
         <div class="container">
-            <h2>Interested in Presenting?</h2>
-            <p>Abstract submissions and speaker details will be announced in due course. Further details will follow shortly.</p>
+            <h2>Interested in Presenting or Attending?</h2>
+            <p>Join world leaders, researchers, and clinicians in Hyderabad for Asia's premier molecular imaging meeting.</p>
             <div class="btn-group">
-                <a href="registration.html" class="btn btn-accent btn-lg">Register Now</a>
-                <a href="speakers.html" class="btn btn-secondary btn-lg">View Speakers</a>
+                <a href="registration.html" class="btn btn-accent btn-lg"><i class="fas fa-user-plus"></i> Register Now</a>
+                <a href="speakers.html" class="btn btn-secondary btn-lg"><i class="fas fa-users"></i> View Speakers</a>
+                <a href="abstracts.html" class="btn btn-outline btn-lg" style="color: white; border-color: white;"><i class="fas fa-file-lines"></i> Submit Abstract</a>
             </div>
         </div>
     </section>
