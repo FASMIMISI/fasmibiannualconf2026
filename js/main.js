@@ -270,5 +270,92 @@ document.addEventListener('DOMContentLoaded', () => {
         enquiryMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
+    // ── Interactive Schedule & Agenda System ──
+    const scheduleDayBtns = document.querySelectorAll('.schedule-day-btn');
+    const timelineDayPanels = document.querySelectorAll('.timeline-day-panel');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const searchInput = document.getElementById('scheduleSearchInput');
+    const printBtn = document.getElementById('printScheduleBtn');
+    const viewModeBtn = document.getElementById('viewModeBtn');
+    const timelineContainer = document.querySelector('.timeline-container');
+
+    if (viewModeBtn && timelineContainer) {
+        viewModeBtn.addEventListener('click', () => {
+            timelineContainer.classList.toggle('compact-mode');
+            const isCompact = timelineContainer.classList.contains('compact-mode');
+            viewModeBtn.innerHTML = isCompact 
+                ? '<i class="fas fa-list-ul"></i> Detailed View'
+                : '<i class="fas fa-bars-staggered"></i> Compact View';
+        });
+    }
+
+    if (scheduleDayBtns.length > 0) {
+        scheduleDayBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const targetDay = btn.getAttribute('data-day');
+
+                scheduleDayBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                timelineDayPanels.forEach(panel => {
+                    if (targetDay === 'all' || panel.id === 'day-' + targetDay) {
+                        panel.classList.add('active');
+                    } else {
+                        panel.classList.remove('active');
+                    }
+                });
+
+                applyScheduleFilters();
+            });
+        });
+    }
+
+    if (filterBtns.length > 0) {
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                applyScheduleFilters();
+            });
+        });
+    }
+
+    if (searchInput) {
+        searchInput.addEventListener('input', () => {
+            applyScheduleFilters();
+        });
+    }
+
+    if (printBtn) {
+        printBtn.addEventListener('click', () => {
+            window.print();
+        });
+    }
+
+    function applyScheduleFilters() {
+        const activeFilterBtn = document.querySelector('.filter-btn.active');
+        const selectedCategory = activeFilterBtn ? activeFilterBtn.getAttribute('data-filter') : 'all';
+        const searchTerm = searchInput ? searchInput.value.toLowerCase().trim() : '';
+
+        const visiblePanels = document.querySelectorAll('.timeline-day-panel.active');
+        visiblePanels.forEach(panel => {
+            const items = panel.querySelectorAll('.agenda-item');
+            items.forEach(item => {
+                const itemCategory = item.getAttribute('data-category');
+                const textContent = item.textContent.toLowerCase();
+
+                const matchesCategory = (selectedCategory === 'all' || itemCategory === selectedCategory);
+                const matchesSearch = (!searchTerm || textContent.includes(searchTerm));
+
+                if (matchesCategory && matchesSearch) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    }
+
 });
+
 

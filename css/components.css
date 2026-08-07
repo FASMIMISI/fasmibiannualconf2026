@@ -1064,6 +1064,506 @@
     line-height: 1.7;
 }
 
+/* ── Monochromatic Academic Schedule & Agenda System ── */
+.schedule-section {
+    padding: var(--section-padding);
+    background: #F8FAFC;
+}
+
+.schedule-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+/* Segmented Monochromatic Academic Day Selection Bar */
+.schedule-nav {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+
+.schedule-day-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 14px 24px;
+    background: var(--bg-white);
+    border: 1.5px solid #CBD5E1;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-width: 220px;
+    text-align: center;
+}
+
+.schedule-day-btn .day-tag {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-blue);
+    margin-bottom: 2px;
+}
+
+.schedule-day-btn .day-title {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 2px;
+}
+
+.schedule-day-btn .day-sub {
+    font-size: 0.8rem;
+    color: #475569;
+}
+
+.schedule-day-btn:hover {
+    border-color: var(--primary-blue);
+    background: #F1F5F9;
+}
+
+.schedule-day-btn.active {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+    box-shadow: 0 4px 12px rgba(8, 58, 122, 0.15);
+}
+
+.schedule-day-btn.active .day-tag {
+    color: #93C5FD;
+}
+
+.schedule-day-btn.active .day-title,
+.schedule-day-btn.active .day-sub {
+    color: #FFFFFF;
+}
+
+/* Academic Controls & Toolbar */
+.schedule-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    max-width: 1000px;
+    margin: 0 auto 32px;
+    background: var(--bg-white);
+    padding: 14px 20px;
+    border-radius: var(--radius-md);
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    flex-wrap: wrap;
+}
+
+.schedule-search {
+    position: relative;
+    flex: 1;
+    min-width: 240px;
+}
+
+.schedule-search i {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #64748B;
+    font-size: 0.88rem;
+}
+
+.schedule-search input {
+    width: 100%;
+    padding: 9px 14px 9px 38px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font-family: var(--font-body);
+    font-size: 0.88rem;
+    transition: all var(--transition-fast);
+}
+
+.schedule-search input:focus {
+    outline: none;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(11, 77, 162, 0.1);
+}
+
+.schedule-filters {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.filter-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #F1F5F9;
+    color: #334155;
+    border: 1px solid #E2E8F0;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: var(--primary-blue);
+    color: #FFFFFF;
+    border-color: var(--primary-blue);
+}
+
+.action-btns-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.view-mode-btn,
+.print-btn {
+    padding: 6px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    background: #FFFFFF;
+    color: #1E293B;
+    border: 1px solid #CBD5E1;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.view-mode-btn:hover,
+.print-btn:hover {
+    background: #F8FAFC;
+    border-color: var(--primary-blue);
+    color: var(--primary-blue);
+}
+
+/* Timeline Panels */
+.timeline-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.timeline-day-panel {
+    display: none;
+    animation: fadeIn 0.35s ease;
+}
+
+.timeline-day-panel.active {
+    display: block;
+}
+
+.timeline-day-banner {
+    background: var(--primary-dark);
+    color: #FFFFFF;
+    padding: 20px 28px;
+    border-radius: var(--radius-md);
+    margin-bottom: 24px;
+    box-shadow: 0 4px 12px rgba(8, 58, 122, 0.12);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.timeline-day-banner h3 {
+    color: #FFFFFF;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 2px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 0.3px;
+}
+
+.timeline-day-banner p {
+    opacity: 0.88;
+    font-size: 0.88rem;
+}
+
+.timeline-day-banner .session-count-badge {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding: 4px 14px;
+    border-radius: 4px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Structured Monochromatic Agenda Row / Card */
+.agenda-item {
+    display: flex;
+    gap: 24px;
+    background: #FFFFFF;
+    border-radius: var(--radius-md);
+    padding: 24px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
+    border: 1px solid #E2E8F0;
+    border-left: 4px solid var(--primary-blue);
+    transition: all var(--transition-fast);
+    position: relative;
+}
+
+.agenda-item:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+/* All Card Highlight Varieties - Uniform Monochromatic Navy Accent */
+.agenda-item.highlight-keynote,
+.agenda-item.highlight-memorial,
+.agenda-item.highlight-panel,
+.agenda-item.highlight-break {
+    border-left-color: var(--primary-dark);
+    border-top: 1px solid #E2E8F0;
+    background: #FFFFFF;
+}
+
+.agenda-time-col {
+    width: 190px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.agenda-time-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--primary-dark);
+    background: #F1F5F9;
+    padding: 6px 14px;
+    border-radius: 4px;
+    white-space: nowrap;
+    border: 1px solid #E2E8F0;
+}
+
+.agenda-item.highlight-keynote .agenda-time-pill,
+.agenda-item.highlight-memorial .agenda-time-pill,
+.agenda-item.highlight-panel .agenda-time-pill,
+.agenda-item.highlight-break .agenda-time-pill {
+    background: #F1F5F9;
+    color: var(--primary-dark);
+    border-color: #E2E8F0;
+}
+
+/* Monochromatic Category Badges */
+.agenda-badge,
+.badge-keynote,
+.badge-memorial,
+.badge-session,
+.badge-panel,
+.badge-ceremony,
+.badge-break {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    padding: 4px 10px;
+    border-radius: 3px;
+    background: #EAF2FB;
+    color: var(--primary-blue);
+    border: 1px solid #D1E4F9;
+}
+
+.agenda-content-col {
+    flex: 1;
+}
+
+.agenda-session-code {
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #64748B;
+    margin-bottom: 4px;
+}
+
+.agenda-title {
+    font-family: var(--font-heading);
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.agenda-subtitle {
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #1E293B;
+    margin-bottom: 12px;
+    background: #F8FAFC;
+    padding: 8px 14px;
+    border-left: 3px solid var(--primary-blue);
+    border-radius: 0 4px 4px 0;
+    line-height: 1.5;
+}
+
+.agenda-item.highlight-keynote .agenda-subtitle,
+.agenda-item.highlight-memorial .agenda-subtitle {
+    border-left-color: var(--primary-dark);
+    background: #F8FAFC;
+    color: #1E293B;
+}
+
+/* Monochromatic Academic Leadership Grid */
+.agenda-leadership {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #F1F5F9;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.leadership-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.88rem;
+    color: #475569;
+}
+
+.leadership-item i {
+    color: var(--primary-blue);
+    margin-top: 3px;
+    width: 14px;
+    flex-shrink: 0;
+    font-size: 0.82rem;
+}
+
+.agenda-item.highlight-keynote .leadership-item i {
+    color: #D97706;
+}
+
+.agenda-item.highlight-memorial .leadership-item i {
+    color: #6B21A8;
+}
+
+.leadership-role {
+    font-weight: 700;
+    color: #0F172A;
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.leadership-name {
+    color: #083A7A;
+    font-weight: 700;
+}
+
+.leadership-affil {
+    color: #64748B;
+    font-size: 0.84rem;
+}
+
+.agenda-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: #64748B;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.agenda-location i {
+    color: var(--primary-blue);
+}
+
+/* Compact View Mode Overrides */
+.timeline-container.compact-mode .agenda-item {
+    padding: 16px 20px;
+    gap: 16px;
+    margin-bottom: 10px;
+}
+
+.timeline-container.compact-mode .agenda-leadership {
+    display: none;
+}
+
+.timeline-container.compact-mode .agenda-title {
+    font-size: 1.02rem;
+    margin-bottom: 2px;
+}
+
+.timeline-container.compact-mode .agenda-subtitle {
+    padding: 4px 10px;
+    font-size: 0.85rem;
+    margin-bottom: 4px;
+}
+
+/* Print Styles */
+@media print {
+    .navbar, .footer, .cta-banner, .schedule-controls, .schedule-nav, .page-hero, .academic-stats-bar {
+        display: none !important;
+    }
+    .timeline-day-panel {
+        display: block !important;
+        page-break-after: always;
+    }
+    .agenda-item {
+        break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .academic-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .academic-stats-bar {
+        grid-template-columns: 1fr;
+    }
+    .agenda-item {
+        flex-direction: column;
+        gap: 12px;
+        padding: 18px;
+    }
+    .agenda-time-col {
+        width: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .schedule-day-btn {
+        min-width: 100%;
+    }
+    .schedule-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+
+
 /* ── Footer ── */
 .footer {
     background: var(--primary-darker);
