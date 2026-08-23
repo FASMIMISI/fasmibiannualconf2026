@@ -141,17 +141,23 @@ document.addEventListener('DOMContentLoaded', () => {
     const FEE_MATRIX = {
         'Student': {
             'India': { standard: 3500, member: 3000 },
+            'Regional': { standard: 5500, member: 4500 },
             'Asian': { standard: 5500, member: 4500 },
+            'International': { standard: 8000, member: 6000 },
             'Rest of World': { standard: 8000, member: 6000 }
         },
         'Academic': {
             'India': { standard: 5500, member: 5000 },
+            'Regional': { standard: 8000, member: 7000 },
             'Asian': { standard: 8000, member: 7000 },
+            'International': { standard: 11000, member: 9000 },
             'Rest of World': { standard: 11000, member: 9000 }
         },
         'Industry': {
             'India': { standard: 8000, member: 7500 },
+            'Regional': { standard: 11000, member: 10000 },
             'Asian': { standard: 11000, member: 10000 },
+            'International': { standard: 14000, member: 12000 },
             'Rest of World': { standard: 14000, member: 12000 }
         }
     };
@@ -293,6 +299,12 @@ document.addEventListener('DOMContentLoaded', () => {
             // Verification proof check if member rate claimed
             if (isMemberDiscount && proofFileInput && (!proofFileInput.files || proofFileInput.files.length === 0)) {
                 showRegMessage('Please upload your institutional ID or membership proof to claim the preferential rate.', 'error');
+                return;
+            }
+
+            // Mandatory Payment Screenshot / Receipt check
+            if (!receiptFileInput || !receiptFileInput.files || receiptFileInput.files.length === 0) {
+                showRegMessage('Please upload your payment screenshot or transaction receipt.', 'error');
                 return;
             }
 

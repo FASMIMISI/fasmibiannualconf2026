@@ -2042,15 +2042,17 @@
 }
 
 .fee-table .price-disc {
-    display: inline-block;
+    display: block;
+    width: fit-content;
     background: #E8F5E9;
     color: #1B5E20;
-    font-size: 0.82rem;
+    font-size: 0.80rem;
     font-weight: 600;
     padding: 4px 10px;
     border-radius: 20px;
     margin-top: 6px;
     border: 1px solid #C8E6C9;
+    white-space: nowrap;
 }
 
 /* ── Eligibility Box ── */
@@ -2121,11 +2123,11 @@
     background: #FF9933;
 }
 
-.badge-asian {
+.badge-asian, .badge-regional {
     background: #0B4DA2;
 }
 
-.badge-row {
+.badge-row, .badge-international {
     background: #138808;
 }
 
