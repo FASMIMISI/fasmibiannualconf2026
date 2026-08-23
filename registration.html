@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration | FASMI Biennial Meeting 2026</title>
+    <title>Registration & Fee Structure | FASMI Biennial Meeting 2026</title>
     <meta name="description"
-        content="Register for the FASMI Biennial Meeting 2026 in Hyderabad, India. October 26–28, 2026.">
+        content="Register for the FASMI Biennial Meeting 2026 in Hyderabad, India. View official registration fees, category discounts, bank transfer details, and complete your online registration.">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="icon" href="assets/images/logo.png" type="image/png">
@@ -41,78 +41,560 @@
     <!-- ═══ PAGE HERO ═══ -->
     <section class="page-hero">
         <div class="container">
-            <h1>Registration</h1>
-            <p>Secure your place at FASMI Biennial Meeting 2026 — Hyderabad, India.</p>
+            <span class="badge badge-accent mb-2" style="background: rgba(242,140,40,0.2); color: #FFD29D; padding: 6px 16px; border-radius: 30px; font-weight: 600; font-size: 0.85rem; display: inline-block;">
+                <i class="fas fa-ticket-alt"></i> Conference Registrations Open
+            </span>
+            <h1 style="margin-top: 10px;">Registration & Fee Structure</h1>
+            <p>Secure your participation at Asia's premier molecular imaging congress in Hyderabad, India &bull; October 26–28, 2026.</p>
         </div>
     </section>
 
-    <!-- ═══ REGISTRATION FORM ═══ -->
-    <section class="section">
+    <!-- ═══ REGISTRATION PROCESS & INTERACTIVE FORM ═══ -->
+    <section class="section" id="registerNowSection" style="padding-top: 60px; padding-bottom: 50px;">
         <div class="container">
-            <div class="text-center" style="margin-bottom:40px;">
-                <span class="section-label">Join Us</span>
-                <h2 class="section-title">Register for the Conference</h2>
-                <p class="section-subtitle">Fees and deadlines will be announced shortly. Fill in your details below. You will receive a confirmation email after
-                    successful registration.</p>
+            <div class="text-center" style="margin-bottom: 40px;">
+                <span class="section-label">Online Application</span>
+                <h2 class="section-title">Conference Registration Form</h2>
+                <p class="section-subtitle">
+                    Select your cohort and category to automatically calculate your exact conference fee, follow the secure online payment checkout, and submit your registration details.
+                </p>
             </div>
 
-            <div class="form-container animate-on-scroll">
-                <form id="registrationForm" novalidate>
-                    <div class="form-group">
-                        <label for="fullName">Full Name <span class="required">*</span></label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+            <div class="reg-form-wrapper">
+                
+                <!-- MAIN REGISTRATION FORM -->
+                <div class="reg-form-card animate-on-scroll">
+                    <div class="form-card-header">
+                        <div class="step-indicator">
+                            <span class="step-badge active"><i class="fas fa-user-pen"></i> Step 1: Delegate Details &amp; Category</span>
+                        </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="email">Email Address <span class="required">*</span></label>
-                        <input type="email" id="email" name="email" placeholder="your.email@example.com" required>
+                    <form id="registrationForm" novalidate>
+                        
+                        <!-- 1. PERSONAL DETAILS -->
+                        <div class="form-section-block">
+                            <h3 class="form-block-title"><i class="fas fa-id-badge"></i> Delegate Information</h3>
+                            
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="fullName">Full Name (with Title) <span class="required">*</span></label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-user input-icon"></i>
+                                        <input type="text" id="fullName" name="fullName" placeholder="e.g. Prof. / Dr. / Mr. / Ms. John Doe" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Official Email Address <span class="required">*</span></label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-envelope input-icon"></i>
+                                        <input type="email" id="email" name="email" placeholder="your.email@university.edu" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="phone">Phone / WhatsApp Number <span class="required">*</span></label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-phone input-icon"></i>
+                                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210 (with country code)" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="country">Country of Residence <span class="required">*</span></label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-earth-americas input-icon"></i>
+                                        <input type="text" id="country" name="country" placeholder="e.g. India, Japan, South Korea, USA" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="organization">Organization / Institution <span class="required">*</span></label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-university input-icon"></i>
+                                        <input type="text" id="organization" name="organization" placeholder="e.g. Osmania University / IIT-H / Company" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="designation">Designation / Role <span class="required">*</span></label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-briefcase input-icon"></i>
+                                        <input type="text" id="designation" name="designation" placeholder="e.g. Professor, Postdoc Fellow, PhD Scholar, Director" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 2. REGISTRATION CATEGORY & SELECTION -->
+                        <div class="form-section-block">
+                            <h3 class="form-block-title"><i class="fas fa-calculator"></i> Category &amp; Fee Selection</h3>
+                            
+                            <div class="form-grid-2">
+                                <div class="form-group">
+                                    <label for="regionalCohort">Regional Cohort <span class="required">*</span></label>
+                                    <select id="regionalCohort" name="regionalCohort" required>
+                                        <option value="" disabled selected>-- Select your region --</option>
+                                        <option value="India">India (MSI / OU / IIT-H Affiliates)</option>
+                                        <option value="Asian">Asian (FASMI Member Countries)</option>
+                                        <option value="Rest of World">Rest of World (IASNM / Global Delegates)</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="attendeeCategory">Attendee Category <span class="required">*</span></label>
+                                    <select id="attendeeCategory" name="attendeeCategory" required>
+                                        <option value="" disabled selected>-- Select Attendee Category --</option>
+                                        <option value="Student">Student / Trainee (Up to &lt; 2 years post-PhD)</option>
+                                        <option value="Academic">Academic Personnel (University / Hospital / Research)</option>
+                                        <option value="Industry">Industry Professional (Corporate &amp; Commercial)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Preferential Rate / Membership Checkbox -->
+                            <div class="member-rate-box">
+                                <label class="custom-checkbox-container">
+                                    <input type="checkbox" id="isMemberDiscount" name="isMemberDiscount">
+                                    <span class="checkmark"></span>
+                                    <span class="checkbox-label-text">
+                                        <strong>I am eligible for preferential / member discounted rate (*)</strong>
+                                        <span class="d-block text-muted-sm">Applicable for MSI Members, OU / IIT-H faculty &amp; students, FASMI Members, IASNM Members, or approved sponsor allocations.</span>
+                                    </span>
+                                </label>
+                            </div>
+
+                            <!-- Document Upload / Proof Field (Shows when discounted rate is checked) -->
+                            <div class="form-group upload-proof-wrapper" id="proofUploadContainer" style="display: none;">
+                                <label for="proofFile">Upload Verification Document / ID Proof <span class="required">*</span></label>
+                                <div class="file-upload-box" id="dropZone">
+                                    <i class="fas fa-cloud-arrow-up file-icon"></i>
+                                    <p class="file-upload-text"><strong>Click to browse</strong> or drag and drop Institutional ID / Membership Letter / Sponsor Pass</p>
+                                    <span class="file-format-hint">Accepted formats: PDF, JPG, PNG (Max size: 5MB)</span>
+                                    <input type="file" id="proofFile" name="proofFile" accept=".pdf,.jpg,.jpeg,.png">
+                                    <div class="selected-file-info" id="fileInfo" style="display:none;"></div>
+                                </div>
+                            </div>
+
+                            <!-- Dynamic Calculated Fee Summary Box -->
+                            <div class="fee-calculated-summary" id="feeSummaryBox">
+                                <div class="summary-details">
+                                    <span class="summary-label">Payable Registration Fee:</span>
+                                    <div class="summary-cohort-tag" id="summaryCohortText">Please select your region &amp; category above</div>
+                                </div>
+                                <div class="summary-amount">
+                                    <span class="currency">INR</span>
+                                    <span class="amount-number" id="calculatedFeeDisplay">--</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. PAYMENT VIA UPI QR / BANK TRANSFER & TRANSACTION DETAILS -->
+                        <div class="form-section-block">
+                            <h3 class="form-block-title"><i class="fas fa-money-check-dollar text-accent"></i> Payment &amp; Transaction Details</h3>
+                            <p class="section-desc-sm">
+                                Please transfer the exact calculated registration fee using the dynamic UPI QR Code or official bank account details below, then enter your Transaction Reference (UTR / UPI Ref) to complete your registration.
+                            </p>
+
+                            <!-- PAYMENT INSTRUCTIONS GRID (QR + BANK DETAILS) -->
+                            <div class="payment-methods-grid">
+                                
+                                <!-- LEFT: DYNAMIC UPI QR CODE -->
+                                <div class="payment-instruction-box upi-instruction-box">
+                                    <div class="pib-header">
+                                        <i class="fas fa-qrcode"></i>
+                                        <div>
+                                            <h4>Option A: UPI &amp; QR Pay</h4>
+                                            <small>Scan with GPay, PhonePe, Paytm, BHIM</small>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="upi-qr-center">
+                                        <div class="qr-image-wrapper">
+                                            <img id="upiQrImage" class="real-upi-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi%3A%2F%2Fpay%3Fpa%3D564720110000688%40bkido%26pn%3DPRINCIPAL%2520UCE%2520OSMANIA%2520UNIVERSITY%2520FASMI%26cu%3DINR&margin=4" alt="UPI QR Code">
+                                        </div>
+                                        <span class="qr-scan-note">Amount auto-encoded with exact fee</span>
+                                    </div>
+
+                                    <div class="quick-copy-item" style="margin-top: 12px;">
+                                        <div class="qci-label">UPI ID / VPA:</div>
+                                        <div class="qci-val">
+                                            <span>564720110000688@bkido</span>
+                                            <button type="button" class="copy-mini-btn" onclick="copyToClipboard('564720110000688@bkido', this)" title="Copy UPI ID">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- RIGHT: ESSENTIAL SAFE BANK ACCOUNT DETAILS -->
+                                <div class="payment-instruction-box bank-instruction-box">
+                                    <div class="pib-header">
+                                        <i class="fas fa-building-columns"></i>
+                                        <div>
+                                            <h4>Option B: Direct Bank Transfer</h4>
+                                            <small>NEFT / RTGS / IMPS / Wire Transfer</small>
+                                        </div>
+                                    </div>
+
+                                    <div class="safe-bank-details-list">
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">Account Name:</span>
+                                            <strong class="sb-val">PRINCIPAL UCE OSMANIA UNIVERSITY - FASMI 2026</strong>
+                                        </div>
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">Account No:</span>
+                                            <div class="sb-copy-group">
+                                                <strong class="sb-val highlight">564720110000688</strong>
+                                                <button type="button" class="copy-mini-btn" onclick="copyToClipboard('564720110000688', this)" title="Copy Account Number">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">Bank Name:</span>
+                                            <span class="sb-val">Bank of India (BKID)</span>
+                                        </div>
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">IFSC Code:</span>
+                                            <div class="sb-copy-group">
+                                                <strong class="sb-val highlight">BKID0005647</strong>
+                                                <button type="button" class="copy-mini-btn" onclick="copyToClipboard('BKID0005647', this)" title="Copy IFSC">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">Branch &amp; SOL:</span>
+                                            <span class="sb-val">Adikmet, Hyderabad (SOL: 64470)</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- TRANSACTION DETAILS ENTRY FIELDS -->
+                            <div class="transaction-entry-card">
+                                <h4 class="te-title"><i class="fas fa-receipt text-accent"></i> Enter Payment Proof &amp; Transaction Details</h4>
+                                
+                                <div class="form-grid-2">
+                                    <div class="form-group">
+                                        <label for="paymentMode">Payment Mode Used <span class="required">*</span></label>
+                                        <select id="paymentMode" name="paymentMode" required>
+                                            <option value="" disabled selected>-- Select Payment Mode --</option>
+                                            <option value="UPI / QR Code (GPay / PhonePe / Paytm / BHIM)">UPI / QR Code (GPay / PhonePe / Paytm / BHIM)</option>
+                                            <option value="NEFT / RTGS / IMPS Bank Transfer">NEFT / RTGS / IMPS Bank Transfer</option>
+                                            <option value="Wire Transfer / Direct Account Deposit">Wire Transfer / Direct Account Deposit</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="transactionRef">Transaction Ref / UTR / UPI ID <span class="required">*</span></label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-hashtag input-icon"></i>
+                                            <input type="text" id="transactionRef" name="transactionRef" placeholder="e.g. 423891029384 / UPI Reference / UTR Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-grid-2">
+                                    <div class="form-group">
+                                        <label for="paymentDate">Date of Payment <span class="required">*</span></label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-calendar-day input-icon"></i>
+                                            <input type="date" id="paymentDate" name="paymentDate" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="receiptFile">Upload Payment Screenshot / Receipt (Optional)</label>
+                                        <div class="input-with-icon">
+                                            <i class="fas fa-file-invoice input-icon"></i>
+                                            <input type="file" id="receiptFile" name="receiptFile" accept=".pdf,.jpg,.jpeg,.png">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-top: 6px;">
+                                    <label for="dietaryNeeds">Dietary / Accessibility Requirements (Optional)</label>
+                                    <div class="input-with-icon">
+                                        <i class="fas fa-utensils input-icon"></i>
+                                        <input type="text" id="dietaryNeeds" name="dietaryNeeds" placeholder="e.g. Vegetarian, Jain, Halal, Wheelchair access, Special assistance">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SUBMIT BUTTON -->
+                        <div class="form-submit-wrapper">
+                            <button type="submit" class="btn btn-accent btn-lg w-100" id="submitBtn">
+                                <i class="fas fa-circle-check"></i> Complete &amp; Submit Registration (<span id="btnFeeDisplay">₹--</span>)
+                            </button>
+                            <div class="form-security-badge">
+                                <i class="fas fa-shield-halved"></i> Official Secretariat Verification &bull; Instant Confirmation &amp; E-Receipt
+                            </div>
+                        </div>
+
+                        <div class="form-message" id="formMessage" role="alert"></div>
+                    </form>
+                </div>
+
+                <!-- REGISTRATION SUPPORT CARD -->
+                <div class="reg-support-horizontal-card animate-on-scroll">
+                    <div class="support-card-header">
+                        <div class="support-icon-badge">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div>
+                            <h4>Registration Support &amp; Enquiries</h4>
+                            <p>For queries regarding registration, accommodation assistance, or corporate invoice payments:</p>
+                        </div>
                     </div>
-
-                    <div class="form-group">
-                        <label for="organization">Organization <span class="required">*</span></label>
-                        <input type="text" id="organization" name="organization"
-                            placeholder="University, Institution, or Company" required>
+                    <div class="support-contacts-row">
+                        <a href="mailto:HEADBME@OSMANIA.AC.IN" class="support-contact-pill">
+                            <i class="fas fa-envelope"></i>
+                            <span>HEADBME@OSMANIA.AC.IN</span>
+                        </a>
+                        <a href="mailto:fasmi2026@gmail.com" class="support-contact-pill">
+                            <i class="fas fa-envelope"></i>
+                            <span>fasmi2026@gmail.com</span>
+                        </a>
+                        <a href="tel:+918331997291" class="support-contact-pill">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 83319 97291</span>
+                        </a>
                     </div>
+                </div>
 
-                    <div class="form-group">
-                        <label for="designation">Designation <span class="required">*</span></label>
-                        <input type="text" id="designation" name="designation"
-                            placeholder="e.g. Professor, Researcher, Student" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="country">Country <span class="required">*</span></label>
-                        <input type="text" id="country" name="country" placeholder="e.g. India, Japan, USA" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="category">Category <span class="required">*</span></label>
-                        <select id="category" name="category" required>
-                            <option value="" disabled selected>Select your category</option>
-                            <option value="Academia">Academia</option>
-                            <option value="Industry">Industry</option>
-                            <option value="Student">Student</option>
-                            <option value="Early-career researcher / Postdoc">Early-career researcher / Postdoc</option>
-                            <option value="Clinician">Clinician</option>
-                            <option value="Policy / Government">Policy / Government</option>
-                            <option value="Press / Media">Press / Media</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210">
-                    </div>
-
-                    <button type="submit" class="btn btn-primary form-submit btn-lg" id="submitBtn">
-                        Continue to payment
-                    </button>
-
-                    <div class="form-message" id="formMessage"></div>
-                </form>
             </div>
         </div>
     </section>
+
+    <!-- ═══ REGISTRATION PRICING TABLE SECTION (BELOW FORM) ═══ -->
+    <section class="section section--light" style="padding-top: 60px; padding-bottom: 60px;">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 36px;">
+                <span class="section-label">Official Rates</span>
+                <h2 class="section-title">Registration Fee Matrix (INR)</h2>
+                <p class="section-subtitle" style="margin-bottom: 24px;">
+                    Transparent and tier-based pricing for domestic, regional, and international delegates. Special discounted rates apply to verified members &amp; partner institution affiliates.
+                </p>
+            </div>
+
+            <!-- Price Table Card -->
+            <div class="pricing-table-container animate-on-scroll" style="max-width: 960px; margin: 0 auto 24px;">
+                <div class="table-responsive-wrapper">
+                    <table class="fee-table">
+                        <thead>
+                            <tr>
+                                <th class="col-category">Attendee Category</th>
+                                <th class="col-india">
+                                    <div class="th-region">
+                                        <i class="fas fa-flag"></i> India Cohort
+                                    </div>
+                                    <span class="th-sub">(MSI / OU / IIT-H)</span>
+                                </th>
+                                <th class="col-asian">
+                                    <div class="th-region">
+                                        <i class="fas fa-globe-asia"></i> Asian Cohort
+                                    </div>
+                                    <span class="th-sub">(FASMI Member)</span>
+                                </th>
+                                <th class="col-row">
+                                    <div class="th-region">
+                                        <i class="fas fa-earth-americas"></i> Rest of World
+                                    </div>
+                                    <span class="th-sub">(IASNM / Sponsor)</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="cat-title">
+                                        <i class="fas fa-user-graduate cat-icon"></i>
+                                        <div>
+                                            <strong>Student / Trainee</strong>
+                                            <span class="cat-desc">Up to &lt; 2 years post-PhD / fellows / scholars</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹3,500</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹3,000*</strong> member rate</div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹5,500</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹4,500*</strong> member rate</div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹8,000</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹6,000*</strong> member rate</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-title">
+                                        <i class="fas fa-chalkboard-teacher cat-icon"></i>
+                                        <div>
+                                            <strong>Academic Personnel</strong>
+                                            <span class="cat-desc">University faculty, teaching hospitals &amp; research orgs</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹5,500</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹5,000*</strong> member rate</div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹8,000</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹7,000*</strong> member rate</div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹11,000</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹9,000*</strong> member rate</div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="cat-title">
+                                        <i class="fas fa-briefcase cat-icon"></i>
+                                        <div>
+                                            <strong>Industry Professional</strong>
+                                            <span class="cat-desc">Corporate delegates, commercial &amp; industry partners</span>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹8,000</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹7,500*</strong> member rate</div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹11,000</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹10,000*</strong> member rate</div>
+                                </td>
+                                <td>
+                                    <div class="price-val">₹14,000</div>
+                                    <div class="price-disc"><i class="fas fa-tag"></i> <strong>₹12,000*</strong> member rate</div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Eligibility Guidelines Cards -->
+                <div class="eligibility-box">
+                    <div class="eligibility-header">
+                        <i class="fas fa-circle-info"></i>
+                        <h4>Important Registration &amp; Preferential Rate Eligibility Notes</h4>
+                    </div>
+                    <p class="eligibility-intro">
+                        <strong>* Asterisk Rates (*):</strong> Parenthetical rates represent discounted, preferential base rates reserved exclusively for verified members and affiliated institution delegates as defined below:
+                    </p>
+                    <div class="eligibility-grid">
+                        <div class="elig-card">
+                            <div class="elig-card-title">
+                                <span class="badge-dot badge-india"></span>
+                                <strong>India Cohort Eligibility</strong>
+                            </div>
+                            <p>Special member rates apply to active <strong>MSI Members</strong>, faculty, staff, and students from <strong>Osmania University (OU)</strong> and <strong>IIT-Hyderabad (IIT-H)</strong>, as well as valid complimentary/sponsor registrations allocated to domestic event sponsors.</p>
+                            <small class="text-accent-hint"><i class="fas fa-id-card"></i> Institutional ID / Membership card / Bonafide letter upload required in registration form.</small>
+                        </div>
+
+                        <div class="elig-card">
+                            <div class="elig-card-title">
+                                <span class="badge-dot badge-asian"></span>
+                                <strong>Asian Cohort Eligibility</strong>
+                            </div>
+                            <p>Special member rates apply to verified <strong>FASMI Members</strong> and additional delegate registrations tied to non-Indian Asian corporate sponsors/foundations.</p>
+                            <small class="text-accent-hint"><i class="fas fa-id-card"></i> FASMI Membership verification / sponsor endorsement letter upload required.</small>
+                        </div>
+
+                        <div class="elig-card">
+                            <div class="elig-card-title">
+                                <span class="badge-dot badge-row"></span>
+                                <strong>Rest of World (RoW) Cohort</strong>
+                            </div>
+                            <p>Special member rates apply to active <strong>IASNM Members</strong> and additional corporate delegate registrations provided through international sponsorship packages.</p>
+                            <small class="text-accent-hint"><i class="fas fa-id-card"></i> IASNM Membership proof / sponsor pass ID required.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- ═══ REGISTRATION SUCCESS & E-BADGE MODAL ═══ -->
+    <div class="gateway-modal-overlay" id="successModal" style="display: none;">
+        <div class="gateway-modal-card success-card-modal">
+            <div class="success-header">
+                <div class="success-icon-circle">
+                    <i class="fas fa-check"></i>
+                </div>
+                <h2>Registration &amp; Online Payment Confirmed!</h2>
+                <p>Welcome to FASMI Biennial Meeting 2026, Hyderabad, India</p>
+            </div>
+
+            <div class="receipt-ticket" id="printableReceipt">
+                <div class="ticket-header">
+                    <div>
+                        <div class="ticket-badge">Official Delegate Pass &amp; Receipt</div>
+                        <h4 style="margin:4px 0; color:var(--primary-dark);">FASMI 2026 CONGRESS</h4>
+                    </div>
+                    <div class="ticket-status-paid">
+                        <i class="fas fa-circle-check"></i> PAID ONLINE
+                    </div>
+                </div>
+
+                <div class="ticket-body">
+                    <div class="ticket-row">
+                        <span class="t-label">Delegate Name:</span>
+                        <strong class="t-val" id="receiptName">Dr. Jane Doe</strong>
+                    </div>
+                    <div class="ticket-row">
+                        <span class="t-label">Registration ID:</span>
+                        <strong class="t-val highlight" id="receiptRegId">FASMI-2026-REG-849201</strong>
+                    </div>
+                    <div class="ticket-row">
+                        <span class="t-label">Category &amp; Cohort:</span>
+                        <span class="t-val" id="receiptCategory">India &bull; Academic Personnel</span>
+                    </div>
+                    <div class="ticket-row">
+                        <span class="t-label">Amount Paid:</span>
+                        <strong class="t-val text-primary" id="receiptAmount">₹5,000 INR</strong>
+                    </div>
+                    <div class="ticket-row">
+                        <span class="t-label">Payment Gateway Ref:</span>
+                        <span class="t-val" id="receiptGatewayRef">PG_ONLINE_TXN_948210385</span>
+                    </div>
+                    <div class="ticket-row">
+                        <span class="t-label">Transaction Date:</span>
+                        <span class="t-val" id="receiptDate">15 Aug 2026</span>
+                    </div>
+                </div>
+
+                <div class="ticket-footer">
+                    <small><i class="fas fa-envelope"></i> A copy of this receipt has been dispatched to your email address.</small>
+                </div>
+            </div>
+
+            <div class="success-modal-actions">
+                <button type="button" class="btn btn-primary" onclick="window.print();">
+                    <i class="fas fa-print"></i> Print / Save Receipt PDF
+                </button>
+                <button type="button" class="btn btn-outline" id="closeSuccessBtn">
+                    <i class="fas fa-house"></i> Return to Homepage
+                </button>
+            </div>
+        </div>
+    </div>
 
     <!-- ═══ FOOTER ═══ -->
     <footer class="footer">
@@ -121,7 +603,7 @@
                 <div class="footer-about">
                     <img src="assets/images/logo.jpg" alt="FASMI 2026">
                     <p>FASMI Biennial Meeting 2026 is Asia's premier molecular imaging conference hosted in Hyderabad,
-                        India.</p>
+                        India &bull; October 26–28, 2026.</p>
                 </div>
                 <div>
                     <h4>Quick Links</h4>
@@ -154,11 +636,48 @@
             </div>
             <div class="footer-bottom">
                 <span>&copy; 2026 FASMI Biennial Meeting. All rights reserved.</span>
-                <span>Hosted in Hyderabad, India</span>
+                <span>Hosted at Hyderabad, India</span>
             </div>
         </div>
     </footer>
 
+    <!-- Copy Helper Script -->
+    <script>
+        function copyToClipboard(text, btnElement) {
+            navigator.clipboard.writeText(text).then(() => {
+                const originalHtml = btnElement.innerHTML;
+                btnElement.innerHTML = '<i class="fas fa-check" style="color:#138808;"></i>';
+                btnElement.classList.add('copied');
+                setTimeout(() => {
+                    btnElement.innerHTML = originalHtml;
+                    btnElement.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+            });
+        }
+
+        function copyAllBankDetails(btn) {
+            const fullDetails = 
+`--- FASMI 2026 Official Conference Bank Account ---
+Account Name: PRINCIPAL UNIVERSITY COLLEGE OF ENGINEERING OSMANIA UNIVERSITY-FASMI CONFERENCE
+Account Number: 564720110000688
+Bank: Bank of India (BKID)
+IFSC Code: BKID0005647
+Branch: Adikmet, Hyderabad
+SOL ID: 64470 | Currency: INR
+Address: University College of Engineering, Osmania University, Hyderabad - 500001, Telangana, India
+Contact: +91 8331997291 / HEADBME@OSMANIA.AC.IN`;
+
+            navigator.clipboard.writeText(fullDetails).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<i class="fas fa-check"></i> Banking Details Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2500);
+            });
+        }
+    </script>
     <script src="js/main.js"></script>
 </body>
 
