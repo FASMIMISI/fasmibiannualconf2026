@@ -194,40 +194,51 @@
                             </div>
                         </div>
 
-                        <!-- 3. PAYMENT VIA UPI QR / BANK TRANSFER & TRANSACTION DETAILS -->
+                        <!-- 3. PAYMENT VIA UPI / BANK TRANSFER & TRANSACTION DETAILS -->
                         <div class="form-section-block">
                             <h3 class="form-block-title"><i class="fas fa-money-check-dollar text-accent"></i> Payment &amp; Transaction Details</h3>
                             <p class="section-desc-sm">
-                                Please transfer the exact calculated registration fee using the dynamic UPI QR Code or official bank account details below, then enter your Transaction Reference (UTR / UPI Ref) to complete your registration.
+                                Please transfer the exact calculated registration fee using the official UPI ID or bank account details below, then enter your Transaction Reference (UTR / UPI Ref) to complete your registration.
                             </p>
 
-                            <!-- PAYMENT INSTRUCTIONS GRID (QR + BANK DETAILS) -->
+                            <!-- PAYMENT INSTRUCTIONS GRID (UPI + BANK DETAILS) -->
                             <div class="payment-methods-grid">
                                 
-                                <!-- LEFT: DYNAMIC UPI QR CODE -->
+                                <!-- LEFT: UPI PAYMENT DETAILS -->
                                 <div class="payment-instruction-box upi-instruction-box">
                                     <div class="pib-header">
-                                        <i class="fas fa-qrcode"></i>
+                                        <i class="fas fa-mobile-screen-button"></i>
                                         <div>
-                                            <h4>Option A: UPI &amp; QR Pay</h4>
-                                            <small>Scan with GPay, PhonePe, Paytm, BHIM</small>
+                                            <h4>Option A: UPI Transfer / VPA</h4>
+                                            <small>Pay via GPay, PhonePe, Paytm, BHIM</small>
                                         </div>
                                     </div>
                                     
-                                    <div class="upi-qr-center">
-                                        <div class="qr-image-wrapper">
-                                            <img id="upiQrImage" class="real-upi-qr" src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=upi%3A%2F%2Fpay%3Fpa%3D564720110000688%40bkido%26pn%3DPRINCIPAL%2520UCE%2520OSMANIA%2520UNIVERSITY%2520FASMI%26cu%3DINR&margin=4" alt="UPI QR Code">
+                                    <div class="safe-bank-details-list">
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">Payee Name:</span>
+                                            <strong class="sb-val">PRINCIPAL UCE OSMANIA UNIVERSITY - FASMI 2026</strong>
                                         </div>
-                                        <span class="qr-scan-note">Amount auto-encoded with exact fee</span>
-                                    </div>
-
-                                    <div class="quick-copy-item" style="margin-top: 12px;">
-                                        <div class="qci-label">UPI ID / VPA:</div>
-                                        <div class="qci-val">
-                                            <span>564720110000688@bkido</span>
-                                            <button type="button" class="copy-mini-btn" onclick="copyToClipboard('564720110000688@bkido', this)" title="Copy UPI ID">
-                                                <i class="fas fa-copy"></i>
-                                            </button>
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">UPI ID / VPA:</span>
+                                            <div class="sb-copy-group">
+                                                <strong class="sb-val highlight">564720110000688@bkido</strong>
+                                                <button type="button" class="copy-mini-btn" onclick="copyToClipboard('564720110000688@bkido', this)" title="Copy UPI ID">
+                                                    <i class="fas fa-copy"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">Accepted Apps:</span>
+                                            <span class="sb-val">Google Pay, PhonePe, Paytm, BHIM, Amazon Pay</span>
+                                        </div>
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">Currency:</span>
+                                            <span class="sb-val">INR (Indian Rupee)</span>
+                                        </div>
+                                        <div class="safe-bank-row">
+                                            <span class="sb-label">Transfer Note:</span>
+                                            <span class="sb-val">Add "FASMI 2026 Reg" in remarks</span>
                                         </div>
                                     </div>
                                 </div>
@@ -287,7 +298,7 @@
                                         <label for="paymentMode">Payment Mode Used <span class="required">*</span></label>
                                         <select id="paymentMode" name="paymentMode" required>
                                             <option value="" disabled selected>-- Select Payment Mode --</option>
-                                            <option value="UPI / QR Code (GPay / PhonePe / Paytm / BHIM)">UPI / QR Code (GPay / PhonePe / Paytm / BHIM)</option>
+                                            <option value="UPI Transfer (GPay / PhonePe / Paytm / BHIM)">UPI Transfer (GPay / PhonePe / Paytm / BHIM)</option>
                                             <option value="NEFT / RTGS / IMPS Bank Transfer">NEFT / RTGS / IMPS Bank Transfer</option>
                                             <option value="Wire Transfer / Direct Account Deposit">Wire Transfer / Direct Account Deposit</option>
                                         </select>

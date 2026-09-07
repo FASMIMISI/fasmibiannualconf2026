@@ -125,7 +125,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryCohortText = document.getElementById('summaryCohortText');
     const formMessage = document.getElementById('formMessage');
     const submitBtn = document.getElementById('submitBtn');
-    const upiQrImage = document.getElementById('upiQrImage');
 
     // Success Modal Elements
     const successModal = document.getElementById('successModal');
@@ -191,11 +190,6 @@ document.addEventListener('DOMContentLoaded', () => {
             calculatedFeeDisplay.textContent = formattedFee;
             if (btnFeeDisplay) btnFeeDisplay.textContent = formattedFee;
 
-            // Dynamically update Live Scannable UPI QR Code image
-            if (upiQrImage) {
-                const upiUrl = `upi://pay?pa=564720110000688@bkido&pn=PRINCIPAL%20UCE%20OSMANIA%20UNIVERSITY%20FASMI&am=${fee}&cu=INR&tn=FASMI2026%20REG`;
-                upiQrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=${encodeURIComponent(upiUrl)}&margin=4`;
-            }
 
             if (summaryCohortText) {
                 const discountLabel = isDiscounted ? ' (Preferential / Member Rate)' : ' (Standard Rate)';
