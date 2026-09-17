@@ -89,10 +89,246 @@
     flex-wrap: wrap;
 }
 
+:root {
+    --announcement-bar-height: 40px;
+}
+
+/* ── Top Running Announcement Bar ── */
+.top-announcement-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--announcement-bar-height);
+    background: linear-gradient(90deg, #07152B 0%, #0B4DA2 40%, #1565C0 60%, #07152B 100%);
+    border-bottom: 2px solid var(--accent-orange, #F28C28);
+    color: #FFFFFF;
+    z-index: 1005;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.28);
+    font-family: var(--font-body, 'Inter', sans-serif);
+}
+
+.announcement-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 100%;
+}
+
+.announcement-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: #FFFFFF;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+    box-shadow: 0 0 10px rgba(239, 68, 68, 0.4);
+    flex-shrink: 0;
+}
+
+.announcement-badge .pulse-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    display: inline-block;
+    animation: badgePulse 1.4s infinite ease-in-out;
+}
+
+@keyframes badgePulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(0.7); }
+}
+
+.announcement-marquee {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+}
+
+.announcement-marquee:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: marqueeScroll 24s linear infinite;
+}
+
+.marquee-text {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #E2EBF8;
+    padding-right: 48px;
+}
+
+.marquee-text strong {
+    color: #FFD166;
+    font-weight: 700;
+}
+
+@keyframes marqueeScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.announcement-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--accent-orange, #F28C28);
+    color: #FFFFFF;
+    font-size: 0.76rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+    box-shadow: 0 2px 6px rgba(242, 140, 40, 0.3);
+}
+
+.announcement-cta:hover {
+    background: #FF9F1C;
+    transform: translateX(2px);
+    color: #FFFFFF;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --announcement-bar-height: 36px;
+    }
+    .announcement-badge {
+        font-size: 0.65rem;
+        padding: 2px 7px;
+    }
+    .announcement-cta {
+        display: none;
+    }
+    .marquee-text {
+        font-size: 0.78rem;
+        padding-right: 28px;
+    }
+}
+
+/* ── Extension Notice Card & Badges ── */
+.extension-notice-card {
+    background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+    border: 2px solid #F59E0B;
+    border-radius: var(--radius-lg);
+    padding: 22px 28px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    box-shadow: 0 6px 20px rgba(245, 158, 11, 0.15);
+    margin-bottom: 32px;
+}
+
+.enc-icon {
+    width: 52px;
+    height: 52px;
+    background: #F59E0B;
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+}
+
+.enc-content {
+    flex: 1;
+}
+
+.enc-tag {
+    display: inline-block;
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #92400E;
+    background: #FDE68A;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.enc-content h3 {
+    margin: 0 0 6px;
+    font-size: 1.25rem;
+    color: #78350F;
+    font-weight: 800;
+}
+
+.enc-content p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #92400E;
+    line-height: 1.55;
+}
+
+.enc-action {
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .extension-notice-card {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 18px 20px;
+    }
+    .enc-action {
+        width: 100%;
+    }
+    .enc-action .btn {
+        width: 100%;
+    }
+}
+
+.badge-extended {
+    display: inline-block;
+    background: linear-gradient(135deg, #EF4444, #DC2626);
+    color: #FFFFFF;
+    font-size: 0.68rem;
+    font-weight: 800;
+    padding: 2px 6px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-left: 6px;
+    vertical-align: middle;
+    animation: badgePulse 2s infinite ease-in-out;
+}
+
 /* ── Navbar ── */
 .navbar {
     position: fixed;
-    top: 0;
+    top: var(--announcement-bar-height, 40px);
     left: 0;
     right: 0;
     z-index: 1000;
