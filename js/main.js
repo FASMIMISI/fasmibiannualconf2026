@@ -558,6 +558,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     item.style.display = 'none';
                 }
             });
+
+            const venueBanners = panel.querySelectorAll('.agenda-venue-banner');
+            venueBanners.forEach(banner => {
+                if (selectedCategory !== 'all' || searchTerm) {
+                    banner.style.display = 'none';
+                } else {
+                    banner.style.display = 'flex';
+                }
+            });
         });
     }
 
