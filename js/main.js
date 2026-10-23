@@ -138,6 +138,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Official Fee Matrix (in INR)
     const FEE_MATRIX = {
+        'Attendance': {
+            'India': { standard: 1500, member: 1500 },
+            'Regional': { standard: 1500, member: 1500 },
+            'Asian': { standard: 1500, member: 1500 },
+            'International': { standard: 1500, member: 1500 },
+            'Rest of World': { standard: 1500, member: 1500 }
+        },
+        'Attendee': {
+            'India': { standard: 1500, member: 1500 },
+            'Regional': { standard: 1500, member: 1500 },
+            'Asian': { standard: 1500, member: 1500 },
+            'International': { standard: 1500, member: 1500 },
+            'Rest of World': { standard: 1500, member: 1500 }
+        },
         'Student': {
             'India': { standard: 3500, member: 3000 },
             'Regional': { standard: 5500, member: 4500 },
@@ -192,8 +206,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
             if (summaryCohortText) {
-                const discountLabel = isDiscounted ? ' (Preferential / Member Rate)' : ' (Standard Rate)';
+                const discountLabel = (category === 'Attendance' || category === 'Attendee')
+                    ? ' (Flat Attendance Fee)'
+                    : (isDiscounted ? ' (Preferential / Member Rate)' : ' (Standard Rate)');
                 summaryCohortText.textContent = `${cohort} Cohort • ${category}${discountLabel}`;
+            }
+        } else if ((category === 'Attendance' || category === 'Attendee') && (!cohort || !regionalCohortSelect.value)) {
+            currentCalculatedFee = 1500;
+            calculatedFeeDisplay.textContent = '₹1,500';
+            if (btnFeeDisplay) btnFeeDisplay.textContent = '₹1,500';
+            if (summaryCohortText) {
+                summaryCohortText.textContent = 'Attendance Fee • ₹1,500 (Please select your region above)';
             }
         } else {
             currentCalculatedFee = null;

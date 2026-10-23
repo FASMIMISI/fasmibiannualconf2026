@@ -1749,6 +1749,13 @@
     font-size: 0.84rem;
 }
 
+.panellists-list {
+    margin-top: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .agenda-location {
     display: inline-flex;
     align-items: center;

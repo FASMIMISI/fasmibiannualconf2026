@@ -142,6 +142,31 @@
         .section-badge.amber {
             background: linear-gradient(135deg, #155c3a, #1e8a52);
         }
+
+        .section-badge.cyan {
+            background: linear-gradient(135deg, #0e7490, #0284c7);
+        }
+
+        /* Committee brochure layout rows */
+        .committee-row {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+        }
+
+        .committee-row.row-5 {
+            gap: 18px;
+        }
+
+        .committee-row.row-5 .people-card {
+            width: 200px;
+        }
+
+        .committee-row.row-3 {
+            gap: 28px;
+        }
     </style>
 </head>
 
@@ -218,6 +243,13 @@
                 <span class="section-badge amber">Keynote Speakers</span>
                 <div class="people-grid" style="justify-content:center; margin-top:24px;">
                     <div class="people-card">
+                        <img src="assets/images/Dr. Kumaraswamy Thangaraj .png" alt="Dr. Kumaraswamy Thangaraj"
+                            class="people-photo">
+                        <p class="people-name">Dr. Kumaraswamy Thangaraj</p>
+                        <p class="people-affil">Director, CDFD Hyderabad<br>Senior Principal Scientist, CCMB</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
                         <img src="assets/images/Dr. Abhijit De .png" alt="Dr. Abhijit De" class="people-photo">
                         <p class="people-name">Dr. Abhijit De</p>
                         <p class="people-affil">Scientific Officer (G), ACTREC<br>Tata Memorial Centre</p>
@@ -226,36 +258,15 @@
                 </div>
             </div>
 
-            <!-- ── 3. Invited Speakers & Expert Panelists ── -->
+            <!-- ── 3. Invited Speakers ── -->
             <div class="speakers-section text-center animate-on-scroll">
-                <span class="section-badge teal">Invited Speakers &amp; Expert Panelists</span>
+                <span class="section-badge teal">Invited Speakers</span>
                 <div class="people-grid" style="margin-top:24px;">
-                    <div class="people-card">
-                        <img src="assets/images/Dr. Kumaraswamy Thangaraj .png" alt="Dr. Kumaraswamy Thangaraj"
-                            class="people-photo">
-                        <p class="people-name">Dr. Kumaraswamy Thangaraj</p>
-                        <p class="people-affil">Senior Principal Scientist<br>CCMB Hyderabad</p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/Dr. Xiaowei Wang .png" alt="Dr. Xiaowei Wang" class="people-photo">
-                        <p class="people-name">Dr. Xiaowei Wang</p>
-                        <p class="people-affil">Professor and Cardiovascular Scientist<br>Baker Heart &amp; Diabetes
-                            Institute</p>
-                        <p class="people-country">Australia</p>
-                    </div>
                     <div class="people-card">
                         <img src="assets/images/rao papineni.png" alt="Dr. Rao V. L. Papineni" class="people-photo">
                         <p class="people-name">Dr. Rao V. L. Papineni</p>
                         <p class="people-affil">Adjunct Faculty<br>University of Kansas Medical Center</p>
                         <p class="people-country">USA</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/Dr. Ichio Aoki .png" alt="Dr. Ichio Aoki" class="people-photo">
-                        <p class="people-name">Dr. Ichio Aoki</p>
-                        <p class="people-affil">Senior Principal Investigator<br>QST — National Institutes
-                            for<br>Quantum Science and Technology</p>
-                        <p class="people-country">Japan</p>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/Phani.jpg" alt="Dr. Phaneendra K. Yalavarthy" class="people-photo">
@@ -281,16 +292,30 @@
                         <p class="people-country">Japan</p>
                     </div>
                     <div class="people-card">
-                        <img src="assets/images/venkat.jpg" alt="Dr. Venkatesh Rangarajan" class="people-photo">
-                        <p class="people-name">Dr. Venkatesh Rangarajan</p>
-                        <p class="people-affil">Professor &amp; Head<br>Department of Nuclear Medicine<br>&amp;
-                            Molecular Imaging<br>Tata Memorial Centre<br>Homi Bhabha National Institute</p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
                         <img src="assets/images/AvinashEranki.jpg" alt="Dr. Avinash Eranki" class="people-photo">
                         <p class="people-name">Dr. Avinash Eranki</p>
                         <p class="people-affil">Associate Professor<br>Indian Institute of Technology Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 4. Expert Panellists ── -->
+            <div class="speakers-section text-center animate-on-scroll">
+                <span class="section-badge cyan">Expert Panellists</span>
+                <div class="people-grid" style="margin-top:24px;">
+                    <div class="people-card">
+                        <img src="assets/images/Dr. Ichio Aoki .png" alt="Dr. Ichio Aoki" class="people-photo">
+                        <p class="people-name">Dr. Ichio Aoki</p>
+                        <p class="people-affil">Senior Principal Investigator<br>QST — National Institutes
+                            for<br>Quantum Science and Technology</p>
+                        <p class="people-country">Japan</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/jaladhar.jpg" alt="Dr. Jaladhar Neelavalli" class="people-photo">
+                        <p class="people-name">Dr. Jaladhar Neelavalli</p>
+                        <p class="people-affil">Associate Professor<br>Department of Biomedical Engineering<br>Indian
+                            Institute of Technology Hyderabad</p>
                         <p class="people-country">India</p>
                     </div>
                     <div class="people-card">
@@ -307,24 +332,10 @@
                             Cell Biology<br>Duke-NUS Medical School</p>
                         <p class="people-country">Singapore</p>
                     </div>
-                    <div class="people-card">
-                        <img src="assets/images/jaladhar.jpg" alt="Dr. Jaladhar Neelavalli" class="people-photo">
-                        <p class="people-name">Dr. Jaladhar Neelavalli</p>
-                        <p class="people-affil">Associate Professor<br>Department of Biomedical Engineering<br>Indian
-                            Institute of Technology Hyderabad</p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/Renu.jpg" alt="Dr. Renu John" class="people-photo">
-                        <p class="people-name">Dr. Renu John</p>
-                        <p class="people-affil">Professor<br>Department of Biomedical Engineering<br>Indian Institute of
-                            Technology Hyderabad</p>
-                        <p class="people-country">India</p>
-                    </div>
                 </div>
             </div>
 
-            <!-- ── 4. Chief Patrons ── -->
+            <!-- ── 5. Chief Patrons ── -->
             <div class="speakers-section text-center animate-on-scroll">
                 <span class="section-badge silver">Chief Patrons</span>
                 <div class="people-grid" style="justify-content:center; margin-top:24px;">
@@ -350,7 +361,7 @@
                 </div>
             </div>
 
-            <!-- ── 5. Advisory Committee ── -->
+            <!-- ── 6. Advisory Committee ── -->
             <div class="speakers-section text-center animate-on-scroll">
                 <span class="section-badge indigo">Advisory Committee</span>
                 <div class="people-grid" style="justify-content:center; margin-top:24px;">
@@ -401,45 +412,6 @@
                         <p class="people-affil">Professor of Biomedical Engineering<br>University of Virginia</p>
                         <p class="people-country">USA</p>
                     </div>
-                </div>
-            </div>
-
-            <!-- ── 6. Organising Committee ── -->
-            <div class="speakers-section text-center animate-on-scroll" style="padding-bottom:80px;">
-                <span class="section-badge burgundy">Organising Committee</span>
-                <div class="people-grid" style="margin-top:24px;">
-                    <div class="people-card">
-                        <img src="assets/images/uday.jpg" alt="Dr. Uday Krishnamurthy" class="people-photo">
-                        <p class="people-name">Dr. Uday Krishnamurthy</p>
-                        <p class="people-affil">President, FASMI<br>Professor of Practice, Dept. of Biomedical
-                            Engineering<br>Osmania University, Hyderabad, India<br>GE HealthCare, USA</p>
-                        <p class="people-country">India / USA</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/jyotsna.jpeg" alt="Dr. Jyotsna Rao" class="people-photo">
-                        <p class="people-name">Dr. Jyotsna Rao</p>
-                        <p class="people-affil">President, MISI<br>Nuclear Medicine<br>Apollo Hospitals<br>Hyderabad</p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/principal.jpg" alt="Dr. P. Chandra Sekhar" class="people-photo">
-                        <p class="people-name">Dr. P. Chandra Sekhar</p>
-                        <p class="people-affil">Principal<br>University College of Engineering<br>Osmania University</p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/suman.png" alt="Dr. Suman Reddy" class="people-photo">
-                        <p class="people-name">Dr. Suman Reddy</p>
-                        <p class="people-affil">Professor<br>Dept. of Biomedical Engineering<br>UCE, Osmania University
-                        </p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/AvinashEranki.jpg" alt="Dr. Avinash Eranki" class="people-photo">
-                        <p class="people-name">Dr. Avinash Eranki</p>
-                        <p class="people-affil">Associate Professor<br>Indian Institute of Technology Hyderabad</p>
-                        <p class="people-country">India</p>
-                    </div>
                     <div class="people-card">
                         <img src="assets/images/D Srinivasa Reddy.jpg" alt="Dr. D. Srinivasa Reddy" class="people-photo">
                         <p class="people-name">Dr. D. Srinivasa Reddy</p>
@@ -453,15 +425,108 @@
                         <p class="people-country">India</p>
                     </div>
                     <div class="people-card">
-                        <img src="assets/images/aasthana.jpg" alt="Dr. Amit Asthana" class="people-photo">
-                        <p class="people-name">Dr. Amit Asthana</p>
-                        <p class="people-affil">Associate Professor &amp; Head<br>Department of Medical Devices<br>NIPER Hyderabad</p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
                         <img src="assets/images/brama.jpg" alt="Prof. Bramanandam Manavathi" class="people-photo">
                         <p class="people-name">Prof. Bramanandam Manavathi</p>
                         <p class="people-affil">Professor<br>University of Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── 7. Organising Committee ── -->
+            <div class="speakers-section text-center animate-on-scroll" style="padding-bottom:80px;">
+                <span class="section-badge burgundy">Organising Committee</span>
+                
+                <!-- Page 5 - Row 1: Leadership (2 cards) -->
+                <div class="committee-row row-2" style="margin-top:28px;">
+                    <div class="people-card wide">
+                        <img src="assets/images/uday.jpg" alt="Dr. Uday Krishnamurthy" class="people-photo large">
+                        <p class="people-name">Dr. Uday Krishnamurthy</p>
+                        <p class="people-affil">President, FASMI<br>GE HealthCare, USA<br>Professor of Practice,<br>Dept. of Biomedical Engineering<br>Osmania University, Hyderabad, India</p>
+                        <p class="people-country">India / USA</p>
+                    </div>
+                    <div class="people-card wide">
+                        <img src="assets/images/jyotsna.jpeg" alt="Dr. Jyotsna Rao" class="people-photo large">
+                        <p class="people-name">Dr. Jyotsna Rao</p>
+                        <p class="people-affil">President, MISI<br>Nuclear Medicine<br>Apollo Hospitals, Hyderabad, India</p>
+                        <p class="people-country">India</p>
+                    </div>
+                </div>
+
+                <!-- Page 5 - Row 2: Senior Faculty & Leadership (4 cards) -->
+                <div class="committee-row row-4">
+                    <div class="people-card">
+                        <img src="assets/images/principal.jpg" alt="Prof. P. Chandra Sekhar" class="people-photo">
+                        <p class="people-name">Prof. P. Chandra Sekhar</p>
+                        <p class="people-affil">Principal<br>University College of Engineering<br>Osmania University</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/suman.png" alt="Prof. D. Suman Reddy" class="people-photo">
+                        <p class="people-name">Prof. D. Suman Reddy</p>
+                        <p class="people-affil">Head &amp; Professor<br>Dept. of Biomedical Engineering<br>UCE, Osmania University</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/malini.png" alt="Prof. M. Malini" class="people-photo">
+                        <p class="people-name">Prof. M. Malini</p>
+                        <p class="people-affil">Professor<br>Dept. of Biomedical Engineering, Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/AvinashEranki.jpg" alt="Dr. Avinash Eranki" class="people-photo">
+                        <p class="people-name">Dr. Avinash Eranki</p>
+                        <p class="people-affil">Associate Professor<br>Indian Institute of Technology Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                </div>
+
+                <!-- Page 6 - Row 1: Faculty (5 cards) -->
+                <div class="committee-row row-5">
+                    <div class="people-card">
+                        <img src="assets/images/medi_srinivas.png" alt="Dr. Medi Srinivas" class="people-photo">
+                        <p class="people-name">Dr. Medi Srinivas</p>
+                        <p class="people-affil">Assistant Professor<br>Dept. of Biomedical Engineering, Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/shravanya.png" alt="Dr. G. Shravanya" class="people-photo">
+                        <p class="people-name">Dr. G. Shravanya</p>
+                        <p class="people-affil">Assistant Professor<br>Dept. of Biomedical Engineering, Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/vidyasagar.png" alt="Dr. K. E. Ch. Vidyasagar" class="people-photo">
+                        <p class="people-name">Dr. K. E. Ch. Vidyasagar</p>
+                        <p class="people-affil">Assistant Professor<br>Dept. of Biomedical Engineering, Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/gayathri.png" alt="Ms. B. Gayathri" class="people-photo">
+                        <p class="people-name">Ms. B. Gayathri</p>
+                        <p class="people-affil">Assistant Professor<br>Dept. of Biomedical Engineering, Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/kiran_kore.png" alt="Dr. Kiran Kore" class="people-photo">
+                        <p class="people-name">Dr. Kiran Kore</p>
+                        <p class="people-affil">Assistant Professor<br>Dept. of Biomedical Engineering, Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                </div>
+
+                <!-- Page 6 - Row 2: Faculty & Researchers (5 cards) -->
+                <div class="committee-row row-5">
+                    <div class="people-card">
+                        <img src="assets/images/harish_k.png" alt="Dr. Harish Kuchulakanti" class="people-photo">
+                        <p class="people-name">Dr. Harish Kuchulakanti</p>
+                        <p class="people-affil">Assistant Professor<br>Dept. of Biomedical Engineering, Hyderabad</p>
+                        <p class="people-country">India</p>
+                    </div>
+                    <div class="people-card">
+                        <img src="assets/images/aasthana.jpg" alt="Dr. Amit Asthana" class="people-photo">
+                        <p class="people-name">Dr. Amit Asthana</p>
+                        <p class="people-affil">Associate Professor &amp; Head<br>Department of Medical Devices<br>NIPER Hyderabad</p>
                         <p class="people-country">India</p>
                     </div>
                     <div class="people-card">
@@ -482,6 +547,10 @@
                         <p class="people-affil">PhD Candidate<br>Queensland Brain Institute</p>
                         <p class="people-country">Australia</p>
                     </div>
+                </div>
+
+                <!-- Page 6 - Row 3: Industry & Scholars (3 cards) -->
+                <div class="committee-row row-3">
                     <div class="people-card">
                         <img src="assets/images/eesha.jpeg" alt="Dr. Eeshitha Chinthoju" class="people-photo">
                         <p class="people-name">Dr. Eeshitha Chinthoju</p>
@@ -501,6 +570,7 @@
                         <p class="people-country">Hyderabad, India</p>
                     </div>
                 </div>
+
             </div>
 
         </div><!-- /container -->
