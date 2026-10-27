@@ -33,11 +33,86 @@
             flex-direction: column;
             align-items: center;
             text-align: center;
-            width: 210px;
+            width: 240px;
         }
 
         .people-card.wide {
-            width: 240px;
+            width: 290px;
+        }
+
+        /* Talk, workshop & panel title boxes */
+        .people-talk {
+            margin-top: 10px;
+            font-size: 0.76rem;
+            line-height: 1.42;
+            color: #1e3a5f;
+            background: #f4f8fd;
+            border-left: 3px solid var(--primary-blue, #1a73e8);
+            border-radius: 6px;
+            padding: 8px 10px;
+            text-align: left;
+            width: 100%;
+            box-sizing: border-box;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .people-talk:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .people-talk .talk-type {
+            display: block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            color: var(--primary-blue, #1a73e8);
+            margin-bottom: 3px;
+        }
+
+        .people-talk .talk-title {
+            display: block;
+            font-weight: 600;
+            color: var(--text-dark, #1a1a2e);
+        }
+
+        .people-talk .workshop-note {
+            display: block;
+            margin-top: 5px;
+            padding-top: 4px;
+            border-top: 1px dashed #d1e2f6;
+            font-size: 0.72rem;
+            color: #0284c7;
+            font-weight: 500;
+        }
+
+        .people-talk.keynote-talk {
+            background: #fffcf2;
+            border-left-color: #d4a017;
+        }
+
+        .people-talk.keynote-talk .talk-type {
+            color: #b8860b;
+        }
+
+        .people-talk.memorial-talk {
+            background: #fff7f2;
+            border-left-color: #e67e22;
+        }
+
+        .people-talk.memorial-talk .talk-type {
+            color: #d35400;
+        }
+
+        .people-talk.panel-talk {
+            background: #f0fdfa;
+            border-left-color: #0e7490;
+        }
+
+        .people-talk.panel-talk .talk-type {
+            color: #0e7490;
         }
 
         .people-photo {
@@ -238,6 +313,10 @@
                         <p class="people-name">Dr. Ramasamy Paulmurugan</p>
                         <p class="people-affil">Professor of Radiology<br>Stanford University</p>
                         <p class="people-country">USA</p>
+                        <div class="people-talk memorial-talk">
+                            <span class="talk-type"><i class="fas fa-award"></i> Memorial Lecture</span>
+                            <span class="talk-title">Cancer Immunotherapies in Solid Tumors - Current Challenges and Future Strategies</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -246,19 +325,27 @@
             <div class="speakers-section text-center animate-on-scroll">
                 <span class="section-badge amber">Keynote Speakers</span>
                 <div class="people-grid" style="justify-content:center; margin-top:24px;">
-                    <div class="people-card">
+                    <div class="people-card wide">
                         <img src="assets/images/Dr. Kumaraswamy Thangaraj .png" alt="Dr. Kumarasamy Thangaraj"
-                            class="people-photo">
+                            class="people-photo large">
                         <p class="people-name">Dr. Kumarasamy Thangaraj</p>
                         <p class="people-affil">Padma Shri Awardee, CCMB<br>Director, CDFD Hyderabad</p>
                         <p class="people-country">India</p>
+                        <div class="people-talk keynote-talk">
+                            <span class="talk-type"><i class="fas fa-star"></i> Opening Keynote Lecture</span>
+                            <span class="talk-title">Three decadic journey of a scientist: from population genomics to public health</span>
+                        </div>
                     </div>
-                    <div class="people-card">
-                        <img src="assets/images/Dr. Abhijit De .png" alt="Dr. Abhijit De" class="people-photo">
+                    <div class="people-card wide">
+                        <img src="assets/images/Dr. Abhijit De .png" alt="Dr. Abhijit De" class="people-photo large">
                         <p class="people-name">Dr. Abhijit De</p>
                         <p class="people-affil">Professor, HBNI; Scientific Officer 'H', ACTREC<br>Head, Molecular
                             Functional Imaging Laboratory</p>
                         <p class="people-country">India</p>
+                        <div class="people-talk keynote-talk">
+                            <span class="talk-type"><i class="fas fa-star"></i> Closing Keynote Address</span>
+                            <span class="talk-title">Molecular Imaging: Preparing the blueprint for tailored therapeutics</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -273,6 +360,10 @@
                         <p class="people-affil">Professor, School of Biological &amp; Health Systems
                             Engineering<br>Arizona State University (ASU)</p>
                         <p class="people-country">USA</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">Probes for MR based molecular imaging of hypoxia and oxygenation</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/Dr. Ichio Aoki .png" alt="Dr. Ichio Aoki" class="people-photo">
@@ -280,6 +371,10 @@
                         <p class="people-affil">Senior Principal Investigator<br>QST — National Institutes for Quantum
                             Science and Technology</p>
                         <p class="people-country">Japan</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">Responsive Nano MRI Contrast Agents for Cancer Research and Neuroscience</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/takashi.jpg" alt="Dr. Takashi Temma" class="people-photo"
@@ -287,12 +382,20 @@
                         <p class="people-name">Dr. Takashi Temma</p>
                         <p class="people-affil">Associate Professor<br>Kyoto University</p>
                         <p class="people-country">Japan</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">Molecular Imaging for Advancing BNCT/PET Theranostics</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/rao papineni.png" alt="Dr. Papineni Rao" class="people-photo">
                         <p class="people-name">Dr. Papineni Rao</p>
                         <p class="people-affil">Adjunct Faculty<br>University of Kansas Medical Center</p>
                         <p class="people-country">USA</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">From Seeing to Steering Biology: Two Decades of Molecular Imaging, Multimodal Innovation and the Road to Theranostics</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/AvinashEranki.jpg" alt="Dr. Avinash Eranki" class="people-photo">
@@ -300,6 +403,11 @@
                         <p class="people-affil">Associate Professor<br>Indian Institute of Technology (IIT) Hyderabad
                         </p>
                         <p class="people-country">India</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk &amp; Workshop</span>
+                            <span class="talk-title">Ultrasound for Solid Tumor Imaging and Therapy</span>
+                            <span class="workshop-note"><i class="fas fa-laptop-code"></i> Workshop: AI Analytics &amp; Hands-on AI Assignment</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/Ann-Marie Chacko.jpg" alt="Dr. Ann Marie Chacko" class="people-photo">
@@ -307,18 +415,30 @@
                         <p class="people-affil">Assistant Professor, Cancer &amp; Stem Cell Biology<br>Duke-NUS Medical
                             School / NUS</p>
                         <p class="people-country">Singapore</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">Beyond Detection: Molecular Imaging of Host Response and Treatment Efficacy in Viral Infection</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/venkat.jpg" alt="Dr. Venkata Ramesh" class="people-photo">
                         <p class="people-name">Dr. Venkata Ramesh</p>
                         <p class="people-affil">Consultant<br>Apollo Hospital</p>
                         <p class="people-country">India</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">Nuclear Imaging in Infectious Diseases: From Images to Clinical Decisions</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/vidyani.jpg" alt="Dr. Vidyani Suryadevara" class="people-photo">
                         <p class="people-name">Dr. Vidyani Suryadevara</p>
                         <p class="people-affil">Radiology &amp; Molecular Imaging<br>Stanford University</p>
                         <p class="people-country">USA</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">Molecular imaging tools to detect senescence in osteoarthritis</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/venkata.jpg" alt="Dr. Venkata Mahesh Nitla" class="people-photo"
@@ -326,6 +446,10 @@
                         <p class="people-name">Dr. Venkata Mahesh Nitla</p>
                         <p class="people-affil">Scientist<br>Centre for Cellular &amp; Molecular Biology (CCMB)</p>
                         <p class="people-country">India</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">Advanced Imaging and Biophysical Tools for Exploring Life</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/Phani.jpg" alt="Dr. Phaneendra Yalavarthy" class="people-photo">
@@ -333,6 +457,10 @@
                         <p class="people-affil">Professor, Dept. of Computational and Data Sciences<br>Indian Institute
                             of Science (IISc), Bangalore</p>
                         <p class="people-country">India</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">Non-Invasive Precision Oncology via Digital Biopsy: A Resilient AI Pipeline for Cancer Mutation Prediction</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/amit.jpg" alt="Dr. Amit Kharat" class="people-photo">
@@ -342,6 +470,10 @@
                                 style="color:var(--primary-blue,#1a73e8);text-decoration:none;font-weight:600;">DeepTek</a>
                         </p>
                         <p class="people-country">India</p>
+                        <div class="people-talk">
+                            <span class="talk-type"><i class="fas fa-chalkboard-user"></i> Invited Talk</span>
+                            <span class="talk-title">From Detection to Decision: The Agentic Turn in Medical Imaging AI</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -356,12 +488,20 @@
                         <p class="people-name">Amit Gandhi</p>
                         <p class="people-affil">Panel Moderator &amp; Industry Leader<br>Insight Tribe</p>
                         <p class="people-country">India</p>
+                        <div class="people-talk panel-talk">
+                            <span class="talk-type"><i class="fas fa-comments"></i> Career Guidance Panel</span>
+                            <span class="talk-title">Careers for Imaging Scientists and Biomedical Engineers</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/Er. Vinay Korlepara.jpg" alt="Er. Vinay Korlepara" class="people-photo">
                         <p class="people-name">Er. Vinay Korlepara</p>
                         <p class="people-affil">Industry Leader &amp; Panellist<br>HRS Navigation</p>
                         <p class="people-country">India</p>
+                        <div class="people-talk panel-talk">
+                            <span class="talk-type"><i class="fas fa-comments"></i> Career Guidance Panel</span>
+                            <span class="talk-title">Careers for Imaging Scientists and Biomedical Engineers</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/jaladhar.jpg" alt="Dr. Jaladhar Neelavalli" class="people-photo">
@@ -369,12 +509,21 @@
                         <p class="people-affil">Associate Professor, Dept. of Biomedical Engineering<br>IIT Hyderabad
                         </p>
                         <p class="people-country">India</p>
+                        <div class="people-talk panel-talk">
+                            <span class="talk-type"><i class="fas fa-comments"></i> Career Panel &amp; Workshop</span>
+                            <span class="talk-title">Careers for Imaging Scientists and Biomedical Engineers</span>
+                            <span class="workshop-note"><i class="fas fa-wave-square"></i> Workshop: Understanding Imaging Pathway</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/sylvain.jpg" alt="Mr. Sylvain Mangeot" class="people-photo">
                         <p class="people-name">Mr. Sylvain Mangeot</p>
                         <p class="people-affil">Preclinical Imaging<br>APAC Sales Director</p>
                         <p class="people-country">APAC</p>
+                        <div class="people-talk panel-talk">
+                            <span class="talk-type"><i class="fas fa-comments"></i> Career Guidance Panel</span>
+                            <span class="talk-title">Careers for Imaging Scientists and Biomedical Engineers</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/Dr. Ichio Aoki .png" alt="Dr. Ichio Aoki" class="people-photo">
@@ -382,6 +531,10 @@
                         <p class="people-affil">Senior Principal Investigator<br>QST — National Institutes for Quantum
                             Science and Technology</p>
                         <p class="people-country">Japan</p>
+                        <div class="people-talk panel-talk">
+                            <span class="talk-type"><i class="fas fa-handshake"></i> Strategic Panel Discussion</span>
+                            <span class="talk-title">Establishing Collaborations, Early-Career PhD Development, &amp; Funding Opportunities</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/Vikram Kodibagkar.png" alt="Dr. Vikram Kodibagkar" class="people-photo">
@@ -389,6 +542,10 @@
                         <p class="people-affil">Professor, School of Biological &amp; Health Systems
                             Engineering<br>Arizona State University (ASU)</p>
                         <p class="people-country">USA</p>
+                        <div class="people-talk panel-talk">
+                            <span class="talk-type"><i class="fas fa-handshake"></i> Strategic Panel Discussion</span>
+                            <span class="talk-title">Establishing Collaborations, Early-Career PhD Development, &amp; Funding Opportunities</span>
+                        </div>
                     </div>
                     <div class="people-card">
                         <img src="assets/images/Ann-Marie Chacko.jpg" alt="Dr. Ann Marie Chacko" class="people-photo">
@@ -396,6 +553,10 @@
                         <p class="people-affil">Assistant Professor, Cancer &amp; Stem Cell Biology<br>Duke-NUS Medical
                             School / NUS</p>
                         <p class="people-country">Singapore</p>
+                        <div class="people-talk panel-talk">
+                            <span class="talk-type"><i class="fas fa-handshake"></i> Strategic Panel Discussion</span>
+                            <span class="talk-title">Establishing Collaborations, Early-Career PhD Development, &amp; Funding Opportunities</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -477,25 +638,7 @@
                         <p class="people-affil">Professor of Biomedical Engineering<br>University of Virginia</p>
                         <p class="people-country">USA</p>
                     </div>
-                    <div class="people-card">
-                        <img src="assets/images/D Srinivasa Reddy.jpg" alt="Dr. D. Srinivasa Reddy"
-                            class="people-photo">
-                        <p class="people-name">Dr. D. Srinivasa Reddy</p>
-                        <p class="people-affil">Director<br>CSIR-IICT, Hyderabad</p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/Prof.Vijju Latha.png" alt="Prof. Vijju Latha" class="people-photo">
-                        <p class="people-name">Prof. Vijju Latha</p>
-                        <p class="people-affil">Principal<br>University College of Science<br>Osmania University</p>
-                        <p class="people-country">India</p>
-                    </div>
-                    <div class="people-card">
-                        <img src="assets/images/brama.jpg" alt="Prof. Bramanandam Manavathi" class="people-photo">
-                        <p class="people-name">Prof. Bramanandam Manavathi</p>
-                        <p class="people-affil">Professor<br>University of Hyderabad</p>
-                        <p class="people-country">India</p>
-                    </div>
+
                 </div>
             </div>
 
